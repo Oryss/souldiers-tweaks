@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+# Souldiers Orys' Tweaks
 
-You can use the [editor on GitHub](https://github.com/Oryss/souldiers-tweaks/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is a mod for Souldiers which tweaks some parts of the game.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Features
 
-### Markdown
+* Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## How to install
 
-```markdown
-Syntax highlighted code block
+* [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
+* Follow the Automated Installation steps :
+    * Download MelonLoader.Installer.exe
+    * Run MelonLoader.Installer.exe
+    * Click the SELECT button
+    * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
+    * Click the INSTALL button
+* Download `SouldiersTweaks.dll`
+* Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
-# Header 1
-## Header 2
-### Header 3
+## Usage
 
-- Bulleted
-- List
+* Launch the game
+* Press F11
+    * This should open a window in the top-left corner
+* Press LEFT ARROW to decrease a value, RIGHT ARROW to increase
 
-1. Numbered
-2. List
+## Tweaks
 
-**Bold** and _Italic_ and `Code` text
+### Enemy Health Tweak
 
-[Link](url) and ![Image](src)
-```
+The value represents a health/armor multiplier that is applied to the real multiplier.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Oryss/souldiers-tweaks/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+A value of < 1 means it will reduce the enemy health.
