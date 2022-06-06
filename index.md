@@ -17,7 +17,7 @@ This is a mod for Souldiers which tweaks some parts of the game.
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download `SouldiersTweaks.dll`
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/raw/main/SouldiersTweaks.dll)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
