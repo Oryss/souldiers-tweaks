@@ -6,6 +6,10 @@
 
 ![](https://github.com/Oryss/souldiers-tweaks/blob/main/enemyHealthTweak.gif?raw=true)
 
+* [COMING SOON] Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
+
+![](https://github.com/Oryss/souldiers-tweaks/blob/main/archerArrowMissTweak.gif?raw=true)
+
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
