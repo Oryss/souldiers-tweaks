@@ -1,7 +1,3 @@
-# Souldiers Orys' Tweaks
-
-This is a mod for Souldiers which tweaks some parts of the game.
-
 ## Features
 
 * Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
