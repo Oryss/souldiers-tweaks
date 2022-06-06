@@ -6,7 +6,7 @@ This is a mod for Souldiers which tweaks some parts of the game.
 
 * Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
 
-![](https://github.com/Oryss/souldiers-tweaks/blob/main/enemyHealthTweak.gif)
+![](https://github.com/Oryss/souldiers-tweaks/blob/main/enemyHealthTweak.gif?raw=true)
 
 ## How to install
 
