@@ -27,6 +27,8 @@ This is a mod for Souldiers which tweaks some parts of the game.
     * This should open a window in the top-left corner
 * Press LEFT ARROW to decrease a value, RIGHT ARROW to increase
 
+![](https://github.com/Oryss/souldiers-tweaks/blob/main/gui.gif?raw=true)
+
 ## Tweaks
 
 ### Enemy Health Tweak
