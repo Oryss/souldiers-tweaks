@@ -4,7 +4,7 @@ This is a mod for Souldiers which tweaks some parts of the game.
 
 ## Features
 
-* Enemy Health Modifier : decrease or increase the health and armor of all enemies in the game
+* Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
 
 ## How to install
 
@@ -27,7 +27,7 @@ This is a mod for Souldiers which tweaks some parts of the game.
 
 ## Tweaks
 
-### Enemy Health Modifier
+### Enemy Health Tweak
 
 The value represents a health/armor multiplier that is applied to the real multiplier.
 
