@@ -1,5 +1,8 @@
 theme: jekyll-theme-cayman
-title: "Orys' Souldiers Tweaks Mod"
+title: Orys' Souldiers Tweaks Mod
 description: Souldiers Mod which tweaks some parts of the game
 show_downloads: true
+github:
+  zip_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.0.0.zip
+  tar_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.0.0.tar.gz
 markdown: GFM
