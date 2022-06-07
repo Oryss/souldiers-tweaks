@@ -6,15 +6,15 @@
 
 ![](https://github.com/Oryss/souldiers-tweaks/blob/main/enemyHealthTweak.gif?raw=true)
 
-* [COMING SOON] Ground dodge Tweak
+* Ground dodge Tweak
 
 ![groundDodgeTweak](https://user-images.githubusercontent.com/43440732/172458131-d9846da5-fe3b-449e-8e91-be47f5da9edd.gif)
 
-* [COMING SOON] Archer Bow throw Tweak
+* Archer Bow throw Tweak
 
 ![archerThrowBoost](https://user-images.githubusercontent.com/43440732/172454656-6dbfb896-3a43-41bc-b991-2c37afdcdc22.gif)
 
-* [COMING SOON] Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
+* Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
 
 ![](https://github.com/Oryss/souldiers-tweaks/blob/main/archerArrowMissTweak.gif?raw=true)
 
