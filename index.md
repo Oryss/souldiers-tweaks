@@ -35,14 +35,23 @@
 * Launch the game
 * Press F11
     * This should open a window in the top-left corner
-* Press LEFT ARROW to decrease a value, RIGHT ARROW to increase
+* Use your mouse to enable/disable features and change values
 
-![](https://github.com/Oryss/souldiers-tweaks/blob/main/gui.gif?raw=true)
+## Tweaks List
 
-## Tweaks
-
-### Enemy Health Tweak
+### Enemy Health
 
 The value represents a health/armor multiplier that is applied to the real multiplier.
-
 A value of < 1 means it will reduce the enemy health.
+
+### Archer Arrow Miss
+
+Enable to have infinite arrow range
+
+### Ground Dodge Cooldown
+
+The value represents how long you have to wait until you can dodge again. A value of 0 means there is no cooldown.
+
+### Archer Bow Throw Deceleration / Speed / Return Acceleration
+
+Modify how the bow throw works. A Return Acceleration of 0 means the bow will not come back.
