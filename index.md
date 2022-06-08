@@ -18,6 +18,10 @@
 
 ![](https://github.com/Oryss/souldiers-tweaks/blob/main/archerArrowMissTweak.gif?raw=true)
 
+* **[COMING SOON]** Wizard Target Distance Tweak
+
+![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
+
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
