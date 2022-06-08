@@ -45,8 +45,6 @@ namespace SouldiersTweaks
             GUI.skin.label.alignment = TextAnchor.UpperLeft;
 
             GUILayout.EndHorizontal();
-
-            OnValueChange();
         }
 
         public override void Load()
@@ -59,7 +57,13 @@ namespace SouldiersTweaks
 
         public override void Save()
         {
+            OnValueChange();
             PlayerPrefs.SetFloat(PlayerPrefKey, Value);
+        }
+
+        public override void Reset()
+        {
+            Value = DefaultValue;
         }
     }
 }

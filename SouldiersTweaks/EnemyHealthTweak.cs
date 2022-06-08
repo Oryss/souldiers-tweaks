@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace SouldiersTweaks
+﻿namespace SouldiersTweaks
 {
     public class EnemyHealthTweak : FloatTweak
     {
@@ -16,15 +9,12 @@ namespace SouldiersTweaks
             Value = DefaultValue;
         }
 
-        public void UpdateDifficulty()
-        {
-            
-        }
-
         public override void OnValueChange()
         {
             var difficultyLevel = Utility.GetDifficultyLevel();
-            difficultyLevel.m_enemyLifeMultiplier *= Value;
+            Tweaks.Log("Changing enemy life multiplier, old value : " + difficultyLevel.m_enemyLifeMultiplier.ToString());
+            difficultyLevel.m_enemyLifeMultiplier = Value;
+            Tweaks.Log("New value : " + difficultyLevel.m_enemyLifeMultiplier.ToString());
         }
     }
 }

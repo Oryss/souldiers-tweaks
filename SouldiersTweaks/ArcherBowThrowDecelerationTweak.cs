@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace SouldiersTweaks
+﻿namespace SouldiersTweaks
 {
     public class ArcherBowThrowDecelerationTweak : FloatTweak
     {
@@ -18,6 +11,11 @@ namespace SouldiersTweaks
 
         public override void OnValueChange()
         {
+            if (!Utility.IsPlayerArcher())
+            {
+                return;
+            }
+
             var currentStats = (ArcherCurrentStats)PlayerCurrentStats.GetPlayerCurrentStats();
             currentStats.GetArcherClassBaseStats().m_fSpinningBow_InitialDeceleration = Value;
         }

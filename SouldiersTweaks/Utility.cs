@@ -21,5 +21,24 @@ namespace SouldiersTweaks
 
             return null;
         }
+
+        public static Constants.eCharacters GetPlayerType()
+        {
+            var playerCurrentStats = PlayerCurrentStats.GetPlayerCurrentStats();
+            var baseStats = (PlayerBaseStats) playerCurrentStats.GetBaseStats();
+            var characterType = baseStats.characterType;
+
+            return characterType;
+        }
+
+        public static bool IsPlayerArcher()
+        {
+            return GetPlayerType() == Constants.eCharacters.ARCHER;
+        }
+
+        public static bool IsPlayerWizard()
+        {
+            return GetPlayerType() == Constants.eCharacters.WIZARD;
+        }
     }
 }

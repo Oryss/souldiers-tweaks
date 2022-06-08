@@ -14,24 +14,42 @@ namespace SouldiersTweaks
         private bool displayMenu = false;
 
         // GUI stuff
-        Rect windowRect = new Rect(20, 20, 400, 400);
+        Rect windowRect = new Rect(20, 150, 400, 500);
         int windowId = 1;
+
+        public static MelonLogger.Instance loggerInstance;
 
         private List<Tweak> tweaks = new List<Tweak>()
         {
             new EnemyHealthTweak("Enemy health multiplier"),
-            new ArcherArrowMissTweak("Disable Archer arrow miss"),
+            new GroundDodgeCooldownTweak("Ground dodge cooldown"),
+        };
 
+        private List<Tweak> archerTweaks = new List<Tweak>()
+        {
+            new ArcherArrowMissTweak("Disable Archer arrow miss"),
             new ArcherBowThrowDecelerationTweak("Bow Throw Deceleration"),
             new ArcherBowThrowSpeedTweak("Bow Throw Speed"),
-            new ArcherBowThrowReturnAccelerationTweak("Bow Throw Return cceleration"),
+            new ArcherBowThrowReturnAccelerationTweak("Bow Throw Return acceleration")
         };
+
+    public static void Log (string message)
+        {
+            loggerInstance.Msg(message);
+        }
+
+        public override void OnApplicationLateStart()
+        {
+            base.OnApplicationLateStart();
+
+            loggerInstance = LoggerInstance;
+        }
 
         public override void OnUpdate()
         {
             if (Input.GetKeyDown(KeyCode.F11))
             {
-                LoggerInstance.Msg("Displaying tweaks menu");
+                Log("Displaying tweaks menu");
 
                 displayMenu = !displayMenu;
 
@@ -60,11 +78,19 @@ namespace SouldiersTweaks
 
         void DebugWindow(int windowId)
         {
-            GUI.DragWindow();
-
             foreach (var tweak in tweaks)
             {
                 tweak.Render();
+            }
+
+            Log(Utility.IsPlayerArcher().ToString());
+
+            if (Utility.IsPlayerArcher())
+            {
+                foreach (var tweak in archerTweaks)
+                {
+                    tweak.Render();
+                }
             }
 
             if (GUILayout.Button("Save"))
@@ -75,11 +101,23 @@ namespace SouldiersTweaks
                 }
             }
 
+            GUILayout.Space(20);
+
             if (GUILayout.Button("Load"))
             {
                 foreach (var tweak in tweaks)
                 {
                     tweak.Load();
+                }
+            }
+
+            GUILayout.Space(20);
+
+            if (GUILayout.Button("Reset to defaults"))
+            {
+                foreach (var tweak in tweaks)
+                {
+                    tweak.Reset();
                 }
             }
         }

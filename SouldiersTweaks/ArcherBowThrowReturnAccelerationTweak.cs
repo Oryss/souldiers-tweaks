@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace SouldiersTweaks
+﻿namespace SouldiersTweaks
 {
     public class ArcherBowThrowReturnAccelerationTweak : FloatTweak
     {
-        public string Description = "Archer bow throw deceleration";
+        public string Description = "Archer bow throw return acceleration";
 
         public ArcherBowThrowReturnAccelerationTweak(string label) : base(label, 50f, 0f, 500f, "ArcherBowThrowReturnAccelerationTweak")
         {
@@ -18,6 +11,11 @@ namespace SouldiersTweaks
 
         public override void OnValueChange()
         {
+            if (!Utility.IsPlayerArcher())
+            {
+                return;
+            }
+
             var currentStats = (ArcherCurrentStats)PlayerCurrentStats.GetPlayerCurrentStats();
             currentStats.GetArcherClassBaseStats().m_fSpinningBow_ReturnAcceleration = Value;
         }

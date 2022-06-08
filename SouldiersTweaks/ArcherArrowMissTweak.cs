@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SouldiersTweaks
 {
@@ -23,6 +18,11 @@ namespace SouldiersTweaks
                 return;
             }
 
+            if (!Utility.IsPlayerArcher())
+            {
+                return;
+            }
+
             GameObject player = GlobalSceneManager.m_cInstance.m_player;
             if (!player)
             {
@@ -32,11 +32,21 @@ namespace SouldiersTweaks
             var playerCurrentStats = PlayerCurrentStats.GetPlayerCurrentStats();
 
             ArcherCurrentStats archerCurrentStats = playerCurrentStats.GetComponent<ArcherCurrentStats>();
+            if (!archerCurrentStats)
+            {
+                return;
+            }
+
             archerCurrentStats.SetArrowLifeTimeDistance(float.MaxValue);
         }
 
         public override void OnDeactivate()
         {
+            if (!Utility.IsPlayerArcher())
+            {
+                return;
+            }
+
             if (!GlobalSceneManager.m_cInstance)
             {
                 return;

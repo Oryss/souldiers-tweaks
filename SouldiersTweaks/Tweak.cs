@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-
-namespace SouldiersTweaks
+﻿namespace SouldiersTweaks
 {
     public abstract class Tweak
     {
@@ -16,6 +13,7 @@ namespace SouldiersTweaks
         public abstract void Render();
         public abstract void Save();
         public abstract void Load();
+        public abstract void Reset();
     }
 }
    
