@@ -11,11 +11,6 @@
 
         public override void OnValueChange()
         {
-            if (!Utility.IsPlayerArcher())
-            {
-                return;
-            }
-
             var currentStats = (ArcherCurrentStats)PlayerCurrentStats.GetPlayerCurrentStats();
             currentStats.GetArcherClassBaseStats().m_fSpinningBow_InitialDeceleration = Value;
         }

@@ -19,10 +19,17 @@ namespace SouldiersTweaks
 
         public static MelonLogger.Instance loggerInstance;
 
+        // Tweaks which needs to be accessed from patches
+        public static WizardTargetDistanceTweak wizardTargetDistanceTweakInstance;
+        public static MoneyAmountTweak moneyAmountTweak;
+        public static MoneyProbabilityTweak moneyProbabilityTweak;
+
         private List<Tweak> tweaks = new List<Tweak>()
         {
             new EnemyHealthTweak("Enemy health multiplier"),
             new GroundDodgeCooldownTweak("Ground dodge cooldown"),
+            new MoneyProbabilityTweak("Money probability multiplier"),
+            new MoneyAmountTweak("Money amount multiplier"),
         };
 
         private List<Tweak> archerTweaks = new List<Tweak>()
@@ -33,7 +40,12 @@ namespace SouldiersTweaks
             new ArcherBowThrowReturnAccelerationTweak("Bow Throw Return acceleration")
         };
 
-    public static void Log (string message)
+        private List<Tweak> wizardTweaks = new List<Tweak>()
+        {
+            new WizardTargetDistanceTweak("Wizard attack range"),
+        };
+
+        public static void Log(string message)
         {
             loggerInstance.Msg(message);
         }
@@ -43,12 +55,18 @@ namespace SouldiersTweaks
             base.OnApplicationLateStart();
 
             loggerInstance = LoggerInstance;
+
+            moneyProbabilityTweak = (MoneyProbabilityTweak)tweaks[2];
+            moneyAmountTweak = (MoneyAmountTweak)tweaks[3];
         }
 
         public override void OnUpdate()
         {
             if (Input.GetKeyDown(KeyCode.F11))
             {
+                GlobalSceneManager.m_cInstance.m_bActiveIngameCheats = true;
+                GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats, true, false, 0);
+
                 Log("Displaying tweaks menu");
 
                 displayMenu = !displayMenu;
@@ -64,6 +82,20 @@ namespace SouldiersTweaks
                 }
             }
         }
+
+        public static Dictionary<string, object> GetPatchValues() => new Dictionary<string, object>
+        {
+            { wizardTargetDistanceTweakInstance.PlayerPrefKey , wizardTargetDistanceTweakInstance.Value },
+            { moneyProbabilityTweak.PlayerPrefKey , moneyProbabilityTweak.Value },
+            { moneyAmountTweak.PlayerPrefKey , moneyAmountTweak.Value },
+        };
+        public static bool GetBooleanPatchValueByPlayerPrefKey(string playerPrefKey) => (bool)GetPatchValues()[playerPrefKey];
+        public static float GetFloatPatchValueByPlayerPrefKey(string playerPrefKey) {
+            var val = GetPatchValues()[playerPrefKey];
+           return (float)val;
+        }
+
+        public static object GetPatchValueByPlayerPrefKey(string playerPrefKey) => GetPatchValues()[playerPrefKey];
 
         public override void OnGUI()
         {
@@ -83,13 +115,19 @@ namespace SouldiersTweaks
                 tweak.Render();
             }
 
-            Log(Utility.IsPlayerArcher().ToString());
-
             if (Utility.IsPlayerArcher())
             {
-                foreach (var tweak in archerTweaks)
+                foreach (var archerTweak in archerTweaks)
                 {
-                    tweak.Render();
+                    archerTweak.Render();
+                }
+            }
+
+            if (Utility.IsPlayerWizard())
+            {
+                foreach (var wizardTweak in wizardTweaks)
+                {
+                    wizardTweak.Render();
                 }
             }
 
@@ -98,6 +136,22 @@ namespace SouldiersTweaks
                 foreach (var tweak in tweaks)
                 {
                     tweak.Save();
+                }
+
+                if (Utility.IsPlayerArcher())
+                {
+                    foreach (var archerTweak in archerTweaks)
+                    {
+                        archerTweak.Save();
+                    }
+                }
+
+                if (Utility.IsPlayerWizard())
+                {
+                    foreach (var wizardTweak in wizardTweaks)
+                    {
+                        wizardTweak.Save();
+                    }
                 }
             }
 
@@ -109,6 +163,22 @@ namespace SouldiersTweaks
                 {
                     tweak.Load();
                 }
+
+                if (Utility.IsPlayerArcher())
+                {
+                    foreach (var archerTweak in archerTweaks)
+                    {
+                        archerTweak.Load();
+                    }
+                }
+
+                if (Utility.IsPlayerWizard())
+                {
+                    foreach (var wizardTweak in wizardTweaks)
+                    {
+                        wizardTweak.Load();
+                    }
+                }
             }
 
             GUILayout.Space(20);
@@ -118,6 +188,22 @@ namespace SouldiersTweaks
                 foreach (var tweak in tweaks)
                 {
                     tweak.Reset();
+                }
+
+                if (Utility.IsPlayerArcher())
+                {
+                    foreach (var archerTweak in archerTweaks)
+                    {
+                        archerTweak.Reset();
+                    }
+                }
+
+                if (Utility.IsPlayerWizard())
+                {
+                    foreach (var wizardTweak in wizardTweaks)
+                    {
+                        wizardTweak.Reset();
+                    }
                 }
             }
         }
