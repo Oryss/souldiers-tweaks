@@ -18,7 +18,7 @@
 
 ![](https://github.com/Oryss/souldiers-tweaks/blob/main/archerArrowMissTweak.gif?raw=true)
 
-* **[COMING SOON]** Wizard Target Distance Tweak
+* Wizard Target Distance Tweak
 
 ![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
 
@@ -31,7 +31,7 @@
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.1.1/SouldiersTweaks.dll) (Version 1.1.1)
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.2.0/SouldiersTweaks.dll) (Version 1.2.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
@@ -59,3 +59,7 @@ The value represents how long you have to wait until you can dodge again. A valu
 ### Archer Bow Throw Deceleration / Speed / Return Acceleration
 
 Modify how the bow throw works. A Return Acceleration of 0 means the bow will not come back.
+
+### Wizard Attack Distance
+
+Changes the range of the wizard's basic attack
