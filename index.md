@@ -25,7 +25,7 @@
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
-* Follow the Automated Installation steps :
+* Follow the Automated Installation steps _(You only have to do this once, when new mod versions are out, just replace SouldiersTweaks.dll)_ :
     * Download MelonLoader.Installer.exe
     * Run MelonLoader.Installer.exe
     * Click the SELECT button
