@@ -22,11 +22,11 @@
 
 ![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
 
-* [COMING SOON] Money probability and amount Tweak
+* Money probability and amount Tweak
 
 ![moneyTweakCompressed](https://user-images.githubusercontent.com/43440732/172942844-23cfbb4d-2547-4591-bf76-2ff0d6cd5ec1.gif)
 
-* [COMING SOON] XP multiplier
+* XP multiplier
 
 ![xpTweak](https://user-images.githubusercontent.com/43440732/172942397-4396bb11-ac1a-4668-a127-5e4a74836735.gif)
 
