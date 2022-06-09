@@ -9,17 +9,14 @@ namespace SouldiersTweaks
 {
     public abstract class FloatTweak : Tweak
     {
-        public float DefaultValue { get; set; }
-        public float Value { get; set; }
-        public float Min { get; set; }
-        public float Max { get; set; }
+        public float? DefaultValue { get; set;  }
+        public float? Min { get; set; }
+        public float? Max { get; set; }
+        public float? Value { get; set; }
 
-        public FloatTweak(string label, float defaultValue, float min, float max, string playerPrefKey) : base(label, playerPrefKey)
+        public FloatTweak(string label, string playerPrefKey) : base(label, playerPrefKey)
         {
-            DefaultValue = defaultValue;
-            Value = defaultValue;
-            Min = min;
-            Max = max;
+            Value = DefaultValue;
         }
 
         public abstract void OnValueChange();
@@ -27,23 +24,33 @@ namespace SouldiersTweaks
         public override void Render()
         {
             GUI.skin.label.alignment = TextAnchor.UpperLeft;
-            GUILayout.Label(Label.ToString());
-            float selectedValue = GUILayout.HorizontalSlider(Value, Min, Max);
-            Value = (float) Math.Round(selectedValue, 1);
-
             GUILayout.BeginHorizontal();
 
-            GUI.skin.label.alignment = TextAnchor.UpperLeft;
-            GUILayout.Label(Min.ToString());
+            GUILayout.Label(Label.ToString());
 
-            GUI.skin.label.alignment = TextAnchor.UpperCenter;
-            GUILayout.Label(Value.ToString());
+            GUILayout.BeginHorizontal();
+                GUILayout.BeginVertical();
 
-            GUI.skin.label.alignment = TextAnchor.UpperRight;
-            GUILayout.Label(Max.ToString());
+                    GUILayout.BeginHorizontal();
+                        float selectedValue = GUILayout.HorizontalSlider((float) Value, (float) Min, (float) Max);
+                        Value = (float)Math.Round(selectedValue, 1);
+                    GUILayout.EndHorizontal();
 
-            GUI.skin.label.alignment = TextAnchor.UpperLeft;
+                GUILayout.BeginHorizontal();
+                GUI.skin.label.alignment = TextAnchor.UpperLeft;
+                        GUILayout.Label(Min.ToString());
 
+                        GUI.skin.label.alignment = TextAnchor.UpperCenter;
+                        GUILayout.Label(Value.ToString());
+
+                        GUI.skin.label.alignment = TextAnchor.UpperRight;
+                        GUILayout.Label(Max.ToString());
+
+                        GUI.skin.label.alignment = TextAnchor.UpperLeft;
+                GUILayout.EndHorizontal();
+                GUILayout.EndVertical();
+
+                GUILayout.EndHorizontal();
             GUILayout.EndHorizontal();
         }
 
@@ -57,8 +64,13 @@ namespace SouldiersTweaks
 
         public override void Save()
         {
+            if (null == Value)
+            {
+                return;
+            }
+
             OnValueChange();
-            PlayerPrefs.SetFloat(PlayerPrefKey, Value);
+            PlayerPrefs.SetFloat(PlayerPrefKey, (float) Value);
         }
 
         public override void Reset()

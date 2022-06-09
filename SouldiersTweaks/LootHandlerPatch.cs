@@ -7,13 +7,17 @@ namespace SouldiersTweaks
     {
         public static void Postfix(LootHandler __instance)
         {
-            Tweaks.Log(Tweaks.GetFloatPatchValueByPlayerPrefKey("MoneyProbabilityTweak").ToString());
-            Tweaks.Log(Tweaks.GetFloatPatchValueByPlayerPrefKey("MoneyAmountTweak").ToString());
-
-            if (false)
+            if (null != __instance && null != __instance.money)
             {
-                __instance.money.m_fprob = Tweaks.GetFloatPatchValueByPlayerPrefKey("MoneyProbabilityTweak");
-                __instance.money.m_fAmount = Tweaks.GetFloatPatchValueByPlayerPrefKey("MoneyAmountTweak");
+                if (null != Tweaks.PatchValues.MoneyProbabilityTweakValue)
+                {
+                    __instance.money.m_fprob *= (float)Tweaks.PatchValues.MoneyProbabilityTweakValue;
+                }
+
+                if (null != Tweaks.PatchValues.MoneyAmountTweakValue)
+                {
+                    __instance.money.m_fAmount *= (float)Tweaks.PatchValues.MoneyAmountTweakValue;
+                }
             }
         }
     }

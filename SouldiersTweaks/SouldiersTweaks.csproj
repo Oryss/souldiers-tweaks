@@ -70,7 +70,7 @@
     <Compile Include="MoneyProbabilityTweak.cs" />
     <Compile Include="MoneyAmountTweak.cs" />
     <Compile Include="LootHandlerPatch.cs" />
-    <Compile Include="IntroScenePatch.cs" />
+    <Compile Include="PatchValues.cs" />
     <Compile Include="WizardPatch.cs" />
     <Compile Include="WizardTargetDistanceTweak.cs" />
     <Compile Include="GroundDodgeCooldownTweak.cs" />

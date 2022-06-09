@@ -14,15 +14,11 @@ namespace SouldiersTweaks
         private bool displayMenu = false;
 
         // GUI stuff
-        Rect windowRect = new Rect(20, 150, 400, 500);
+        Rect windowRect = new Rect(20, 150, 500, 700);
         int windowId = 1;
 
         public static MelonLogger.Instance loggerInstance;
-
-        // Tweaks which needs to be accessed from patches
-        public static WizardTargetDistanceTweak wizardTargetDistanceTweakInstance;
-        public static MoneyAmountTweak moneyAmountTweak;
-        public static MoneyProbabilityTweak moneyProbabilityTweak;
+        public static PatchValues PatchValues { get; private set; }
 
         private List<Tweak> tweaks = new List<Tweak>()
         {
@@ -56,17 +52,13 @@ namespace SouldiersTweaks
 
             loggerInstance = LoggerInstance;
 
-            moneyProbabilityTweak = (MoneyProbabilityTweak)tweaks[2];
-            moneyAmountTweak = (MoneyAmountTweak)tweaks[3];
+            PatchValues = new PatchValues();
         }
 
         public override void OnUpdate()
         {
             if (Input.GetKeyDown(KeyCode.F11))
             {
-                GlobalSceneManager.m_cInstance.m_bActiveIngameCheats = true;
-                GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats, true, false, 0);
-
                 Log("Displaying tweaks menu");
 
                 displayMenu = !displayMenu;
@@ -82,20 +74,6 @@ namespace SouldiersTweaks
                 }
             }
         }
-
-        public static Dictionary<string, object> GetPatchValues() => new Dictionary<string, object>
-        {
-            { wizardTargetDistanceTweakInstance.PlayerPrefKey , wizardTargetDistanceTweakInstance.Value },
-            { moneyProbabilityTweak.PlayerPrefKey , moneyProbabilityTweak.Value },
-            { moneyAmountTweak.PlayerPrefKey , moneyAmountTweak.Value },
-        };
-        public static bool GetBooleanPatchValueByPlayerPrefKey(string playerPrefKey) => (bool)GetPatchValues()[playerPrefKey];
-        public static float GetFloatPatchValueByPlayerPrefKey(string playerPrefKey) {
-            var val = GetPatchValues()[playerPrefKey];
-           return (float)val;
-        }
-
-        public static object GetPatchValueByPlayerPrefKey(string playerPrefKey) => GetPatchValues()[playerPrefKey];
 
         public override void OnGUI()
         {
@@ -205,6 +183,14 @@ namespace SouldiersTweaks
                         wizardTweak.Reset();
                     }
                 }
+            }
+
+            GUILayout.Space(20);
+
+            if (GUILayout.Button("Cheat window"))
+            {
+                //GlobalSceneManager.m_cInstance.m_bActiveIngameCheats = true;
+                GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats, true, false, 0);
             }
         }
     }

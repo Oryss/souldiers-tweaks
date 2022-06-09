@@ -7,7 +7,10 @@ namespace SouldiersTweaks
     {
         public static void Postfix(WizardTargetDetector __instance)
         {
-             __instance.m_fRadius = Tweaks.GetFloatPatchValueByPlayerPrefKey("WizardTargetDistanceTweak");
+            if (null != Tweaks.PatchValues.WizardTargetDistanceTweakValue)
+            {
+                __instance.m_fRadius = (float) Tweaks.PatchValues.WizardTargetDistanceTweakValue;
+            }
         }
     }
 }

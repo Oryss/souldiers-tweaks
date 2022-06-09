@@ -1,25 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace SouldiersTweaks
+﻿namespace SouldiersTweaks
 {
     public class GroundDodgeCooldownTweak : FloatTweak
     {
         public string Description = "Dodge cooldown";
 
-        public GroundDodgeCooldownTweak(string label) : base(label, 1.25f, 0f, 5f, "GroundDodgeCooldownTweak")
+        public GroundDodgeCooldownTweak(string label) : base(label, "GroundDodgeCooldownTweak")
         {
+            DefaultValue = 1.25f;
+            Min = 0f;
+            Max = 5f;
             Value = DefaultValue;
         }
 
         public override void OnValueChange()
         {
+            if (Value == null)
+            {
+                return;
+            }
+
             var currentStats = PlayerCurrentStats.GetPlayerCurrentStats();
-            currentStats.m_BaseStats.m_fGroundRollCooldown = Value;
+            currentStats.m_BaseStats.m_fGroundRollCooldown = (float) Value;
         }
     }
 }
