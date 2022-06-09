@@ -24,7 +24,11 @@
 
 * [COMING SOON] Money probability and amount Tweak
 
-![moneyTweak2](https://user-images.githubusercontent.com/43440732/172932320-be8de574-4408-49aa-a165-aa302a039c99.gif)
+![moneyTweakCompressed](https://user-images.githubusercontent.com/43440732/172942844-23cfbb4d-2547-4591-bf76-2ff0d6cd5ec1.gif)
+
+* [COMING SOON] XP multiplier
+
+![xpTweak](https://user-images.githubusercontent.com/43440732/172942397-4396bb11-ac1a-4668-a127-5e4a74836735.gif)
 
 * [COMING SOON?] Unlock RetroForge's Cheat menu
 
