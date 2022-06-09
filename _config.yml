@@ -2,6 +2,6 @@ theme: jekyll-theme-cayman
 description: Souldiers Mod which tweaks some parts of the game
 show_downloads: true
 github:
-  zip_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.2.0.zip
-  tar_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.2.0.tar.gz
+  zip_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.3.0.zip
+  tar_url: https://github.com/Oryss/souldiers-tweaks/archive/refs/tags/1.3.0.tar.gz
 markdown: GFM
