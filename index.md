@@ -22,6 +22,14 @@
 
 ![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
 
+* [COMING SOON] Money probability and amount Tweak
+
+![moneyTweak2](https://user-images.githubusercontent.com/43440732/172932320-be8de574-4408-49aa-a165-aa302a039c99.gif)
+
+* [COMING SOON?] Unlock RetroForge's Cheat menu
+
+![image](https://user-images.githubusercontent.com/43440732/172932016-3d5b3bc2-ac3b-4e3f-8c39-ee6ea7165c40.png)
+
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
