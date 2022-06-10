@@ -1,21 +1,26 @@
-# Souldiers Orys' Tweaks
-
-This is a mod for Souldiers which tweaks some parts of the game.
+# Orys' Souldiers Tweaks Mod
 
 ## Features
 
-* Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
+* Enemy Health Tweak
+* Ground dodge Tweak
+* Archer Bow throw Tweak
+* Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
+* Wizard Target Distance Tweak
+* Money probability and amount Tweak
+* XP multiplier
+* [COMING SOON?] Unlock RetroForge's Cheat menu
 
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
-* Follow the Automated Installation steps :
+* Follow the Automated Installation steps _(You only have to do this once, when new mod versions are out, just replace SouldiersTweaks.dll)_ :
     * Download MelonLoader.Installer.exe
     * Run MelonLoader.Installer.exe
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download `SouldiersTweaks.dll`
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.4.0/SouldiersTweaks.dll) (Version 1.4.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
@@ -23,12 +28,4 @@ This is a mod for Souldiers which tweaks some parts of the game.
 * Launch the game
 * Press F11
     * This should open a window in the top-left corner
-* Press LEFT ARROW to decrease a value, RIGHT ARROW to increase
-
-## Tweaks
-
-### Enemy Health Tweak
-
-The value represents a health/armor multiplier that is applied to the real multiplier.
-
-A value of < 1 means it will reduce the enemy health.
+* Use your mouse to enable/disable features and change values
