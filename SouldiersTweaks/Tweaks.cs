@@ -23,6 +23,7 @@ namespace SouldiersTweaks
         {
             new EnemyHealthTweak(),
             new GroundRollCooldownTweak(),
+            new AirRollCooldownTweak(),
             new MoneyProbabilityTweak(),
             new MoneyAmountTweak(),
             new XpAmountTweak(),

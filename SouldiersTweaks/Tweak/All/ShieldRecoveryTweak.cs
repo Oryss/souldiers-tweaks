@@ -5,7 +5,7 @@ namespace SouldiersTweaks
 {
     public class ShieldRecoveryTweak : FloatTweak
     {
-        public ShieldRecoveryTweak() : base("Shield Recovery multiplier")
+        public ShieldRecoveryTweak() : base("Shield Recovery")
         {
             DefaultValue = 2f;
             Min = 0f;
