@@ -2,9 +2,7 @@
 {
     public class ArcherBowThrowReturnAccelerationTweak : FloatTweak
     {
-        public string Description = "Archer bow throw return acceleration";
-
-        public ArcherBowThrowReturnAccelerationTweak(string label) : base(label, "ArcherBowThrowReturnAccelerationTweak")
+        public ArcherBowThrowReturnAccelerationTweak() : base("Bow Throw Return acceleration")
         {
             DefaultValue = 50f;
             Min = 0f;
@@ -12,7 +10,7 @@
             Value = DefaultValue;
         }
 
-        public override void OnValueChange()
+        public override void OnValueSave()
         {
             if (Value == null)
             {

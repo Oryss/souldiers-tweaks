@@ -4,9 +4,7 @@ namespace SouldiersTweaks
 {
     public class ArcherArrowMissTweak : ToggleTweak
     {
-        public string Description = "Disable arrow missing for the archer";
-
-        public ArcherArrowMissTweak(string label) : base(label, "ArcherArrowMissTweak")
+        public ArcherArrowMissTweak() : base("Disable Archer arrow miss")
         {
             Active = false;
         }

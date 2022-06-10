@@ -2,9 +2,7 @@
 {
     public class ArcherBowThrowDecelerationTweak : FloatTweak
     {
-        public string Description = "Archer bow throw deceleration";
-
-        public ArcherBowThrowDecelerationTweak(string label) : base(label, "ArcherBowThrowDecelerationTweak")
+        public ArcherBowThrowDecelerationTweak() : base("Bow Throw Deceleration")
         {
             DefaultValue = -100f;
             Min = -500f;
@@ -12,7 +10,7 @@
             Value = DefaultValue;
         }
 
-        public override void OnValueChange()
+        public override void OnValueSave()
         {
             if (null == Value)
             {

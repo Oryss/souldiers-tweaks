@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SouldiersTweaks
@@ -14,22 +10,23 @@ namespace SouldiersTweaks
         public float? Max { get; set; }
         public float? Value { get; set; }
 
-        public FloatTweak(string label, string playerPrefKey) : base(label, playerPrefKey)
+        public FloatTweak(string label) : base(label)
         {
             Value = DefaultValue;
         }
 
-        public abstract void OnValueChange();
+        public abstract void OnValueSave();
 
         public override void Render()
         {
             GUI.skin.label.alignment = TextAnchor.UpperLeft;
             GUILayout.BeginHorizontal();
 
-            GUILayout.Label(Label.ToString());
+            GUILayout.Label(Label.ToString(), GUILayout.Width(200));
 
-            GUILayout.BeginHorizontal();
-                GUILayout.BeginVertical();
+            GUILayout.BeginHorizontal(GUILayout.Width(200));
+
+            GUILayout.BeginVertical();
 
                     GUILayout.BeginHorizontal();
                         float selectedValue = GUILayout.HorizontalSlider((float) Value, (float) Min, (float) Max);
@@ -69,7 +66,7 @@ namespace SouldiersTweaks
                 return;
             }
 
-            OnValueChange();
+            OnValueSave();
             PlayerPrefs.SetFloat(PlayerPrefKey, (float) Value);
         }
 

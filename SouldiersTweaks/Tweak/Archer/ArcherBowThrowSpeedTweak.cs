@@ -2,9 +2,7 @@
 {
     public class ArcherBowThrowSpeedTweak : FloatTweak
     {
-        public string Description = "Archer bow throw speed";
-
-        public ArcherBowThrowSpeedTweak(string label) : base(label, "ArcherBowThrowSpeedTweak")
+        public ArcherBowThrowSpeedTweak() : base("Bow Throw Speed")
         {
             DefaultValue = 40f;
             Min = 0f;
@@ -12,7 +10,7 @@
             Value = DefaultValue;
         }
 
-        public override void OnValueChange()
+        public override void OnValueSave()
         {
             if (Value == null)
             {

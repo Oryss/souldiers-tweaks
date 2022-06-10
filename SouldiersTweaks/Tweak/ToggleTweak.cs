@@ -7,7 +7,7 @@ namespace SouldiersTweaks
     {
         public bool Active { get; set; }
 
-        public ToggleTweak(string label, string playerPrefKey) : base(label, playerPrefKey)
+        public ToggleTweak(string label) : base(label)
         {
             Active = false;
         }

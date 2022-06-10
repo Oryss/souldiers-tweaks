@@ -5,10 +5,10 @@
         public string Label { get; }
         public bool Activated { get; set; }
         public string PlayerPrefKey { get; }
-        public Tweak(string label, string playerPrefKey)
+        public Tweak(string label)
         {
             Label = label;
-            PlayerPrefKey = playerPrefKey;
+            PlayerPrefKey = GetType().Name;
             Activated = false;
         }
 

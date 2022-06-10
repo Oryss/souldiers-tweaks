@@ -66,24 +66,28 @@
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArcherArrowMissTweak.cs" />
-    <Compile Include="MoneyProbabilityTweak.cs" />
-    <Compile Include="MoneyAmountTweak.cs" />
-    <Compile Include="LootHandlerPatch.cs" />
-    <Compile Include="PatchValues.cs" />
-    <Compile Include="WizardPatch.cs" />
-    <Compile Include="WizardTargetDistanceTweak.cs" />
-    <Compile Include="GroundDodgeCooldownTweak.cs" />
-    <Compile Include="ArcherBowThrowReturnAccelerationTweak.cs" />
-    <Compile Include="ArcherBowThrowSpeedTweak.cs" />
-    <Compile Include="ArcherBowThrowDecelerationTweak.cs" />
-    <Compile Include="EnemyHealthTweak.cs" />
-    <Compile Include="FloatTweak.cs" />
-    <Compile Include="ToggleTweak.cs" />
-    <Compile Include="Tweak.cs" />
+    <Compile Include="Patch\IPatchTweak.cs" />
+    <Compile Include="Tweak\All\XpAmountTweak.cs" />
+    <Compile Include="Tweak\Archer\ArcherArrowMissTweak.cs" />
+    <Compile Include="Tweak\All\MoneyProbabilityTweak.cs" />
+    <Compile Include="Tweak\All\MoneyAmountTweak.cs" />
+    <Compile Include="Patch\LootHandlerPatch.cs" />
+    <Compile Include="Patch\WizardPatch.cs" />
+    <Compile Include="Tweak\Wizard\WizardTargetDistanceTweak.cs" />
+    <Compile Include="Tweak\All\GroundDodgeCooldownTweak.cs" />
+    <Compile Include="Tweak\Archer\ArcherBowThrowReturnAccelerationTweak.cs" />
+    <Compile Include="Tweak\Archer\ArcherBowThrowSpeedTweak.cs" />
+    <Compile Include="Tweak\Archer\ArcherBowThrowDecelerationTweak.cs" />
+    <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
+    <Compile Include="Tweak\FloatTweak.cs" />
+    <Compile Include="Tweak\ToggleTweak.cs" />
+    <Compile Include="Tweak\Tweak.cs" />
     <Compile Include="Tweaks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tweak\Scout\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

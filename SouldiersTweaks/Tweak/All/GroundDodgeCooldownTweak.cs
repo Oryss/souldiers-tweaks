@@ -2,17 +2,15 @@
 {
     public class GroundDodgeCooldownTweak : FloatTweak
     {
-        public string Description = "Dodge cooldown";
-
-        public GroundDodgeCooldownTweak(string label) : base(label, "GroundDodgeCooldownTweak")
+        public GroundDodgeCooldownTweak() : base("Ground dodge cooldown")
         {
             DefaultValue = 1.25f;
             Min = 0f;
-            Max = 5f;
+            Max = 3f;
             Value = DefaultValue;
         }
 
-        public override void OnValueChange()
+        public override void OnValueSave()
         {
             if (Value == null)
             {
