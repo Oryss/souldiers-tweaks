@@ -4,7 +4,7 @@
 
 * Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
 
-![](https://github.com/Oryss/souldiers-tweaks/blob/main/enemyHealthTweak.gif?raw=true)
+![enemyHealthTweak (3)](https://user-images.githubusercontent.com/43440732/173057716-cda252f5-52a2-4284-88cc-03fd28b9cbec.gif)
 
 * Ground dodge Tweak
 
@@ -16,7 +16,7 @@
 
 * Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
 
-![](https://github.com/Oryss/souldiers-tweaks/blob/main/archerArrowMissTweak.gif?raw=true)
+![archerArrowMissTweak](https://user-images.githubusercontent.com/43440732/173057765-f39f6b57-5ace-4f36-9702-71c51c2ba36c.gif)
 
 * Wizard Target Distance Tweak
 
@@ -43,7 +43,7 @@
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.3.0/SouldiersTweaks.dll) (Version 1.3.0)
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.4.0/SouldiersTweaks.dll) (Version 1.4.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
