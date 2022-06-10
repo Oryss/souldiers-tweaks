@@ -1,5 +1,16 @@
 # Orys' Souldiers Tweaks Mod
 
+## Warning
+
+The reset button does not always reset to the real original values. For example the enemy health modifier doesn't take the original difficulty level's value.
+If you're playing on Easy the original value could be 0.5, but the mod will put it at 1.
+
+**These values might be saved with your save file, which means it could make changes that would be hard to revert.**
+
+I'll see if there is a way to be able to disable the mod's values and let the game take over.
+
+**Meanwhile you have to treat this mod (and any other) as a potential save destroyer. It could introduce bugs and side effects I'm not aware of.**
+
 ## Features
 
 * Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
@@ -43,7 +54,7 @@
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.4.0/SouldiersTweaks.dll) (Version 1.4.0)
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.5.0/SouldiersTweaks.dll) (Version 1.5.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
