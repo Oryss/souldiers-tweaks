@@ -6,6 +6,8 @@ using MelonLoader;
 using SouldiersTweaks.Patch;
 using UnityEngine;
 
+// Orys' tweaks mod
+
 namespace SouldiersTweaks
 {
     public class Tweaks : MelonMod
