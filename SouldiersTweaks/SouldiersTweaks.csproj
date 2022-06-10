@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="Patch\IPatchTweak.cs" />
     <Compile Include="Tweak\All\AirDodgeCooldownTweak.cs" />
+    <Compile Include="Tweak\All\PlayerDamageTweak.cs" />
+    <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
     <Compile Include="Tweak\All\ShieldRecoveryTweak.cs" />
     <Compile Include="Tweak\All\XpAmountTweak.cs" />
     <Compile Include="Tweak\Archer\ArcherArrowMissTweak.cs" />
@@ -80,7 +82,7 @@
     <Compile Include="Tweak\Archer\ArcherBowThrowReturnAccelerationTweak.cs" />
     <Compile Include="Tweak\Archer\ArcherBowThrowSpeedTweak.cs" />
     <Compile Include="Tweak\Archer\ArcherBowThrowDecelerationTweak.cs" />
-    <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
+    <Compile Include="Tweak\All\EnemyDamageTweak.cs" />
     <Compile Include="Tweak\FloatTweak.cs" />
     <Compile Include="Tweak\ToggleTweak.cs" />
     <Compile Include="Tweak\Tweak.cs" />

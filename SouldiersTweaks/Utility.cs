@@ -11,6 +11,8 @@ namespace SouldiersTweaks
             for (int i = 0; i < difficultyLevels.Count; i++)
             {
 
+                Tweaks.Log(difficultyLevels[i].m_level.ToString());
+                Tweaks.Log(difficultyLevels[i].m_enemyLifeMultiplier.ToString());
                 if (difficultyLevels[i].m_level == DifficultyManager.s_cInstance.m_currentDifficulty)
                 {
                     return difficultyLevels[i];

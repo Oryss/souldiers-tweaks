@@ -14,7 +14,7 @@ namespace SouldiersTweaks
     {
         private bool displayMenu = false;
 
-        Rect windowRect = new Rect(20, 150, 450, 600);
+        Rect windowRect = new Rect(20, 150, 500, 900);
         int windowId = 1;
 
         public static MelonLogger.Instance loggerInstance;
@@ -22,6 +22,8 @@ namespace SouldiersTweaks
         private static List<Tweak> tweaks = new List<Tweak>()
         {
             new EnemyHealthTweak(),
+            new EnemyDamageTweak(),
+            new PlayerDamageTweak(),
             new GroundRollCooldownTweak(),
             new AirRollCooldownTweak(),
             new MoneyProbabilityTweak(),
