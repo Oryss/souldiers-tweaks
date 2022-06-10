@@ -26,6 +26,7 @@ namespace SouldiersTweaks
             new MoneyProbabilityTweak(),
             new MoneyAmountTweak(),
             new XpAmountTweak(),
+            new ShieldRecoveryTweak(),
         };
 
         private static List<Tweak> archerTweaks = new List<Tweak>()
@@ -73,8 +74,6 @@ namespace SouldiersTweaks
         {
             if (Input.GetKeyDown(KeyCode.F11))
             {
-                Log("Displaying tweaks menu");
-
                 displayMenu = !displayMenu;
 
                 if (displayMenu)
@@ -125,6 +124,11 @@ namespace SouldiersTweaks
         {
             Type type = typeof(Tweak);
             MethodInfo methodInfo = type.GetMethod(methodName);
+
+            if (null == methodInfo)
+            {
+                return;
+            }
 
             foreach (var tweak in tweaks)
             {

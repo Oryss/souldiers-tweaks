@@ -38,5 +38,32 @@ namespace SouldiersTweaks
         {
             return GetPlayerType() == Constants.eCharacters.WIZARD;
         }
+
+        public static bool IsPlayerSoldier()
+        {
+            return GetPlayerType() == Constants.eCharacters.SOLDIER;
+        }
+
+        public static PlayerCurrentStats GetPlayerCurrentStats()
+        {
+            var currentStats = PlayerCurrentStats.GetPlayerCurrentStats();
+
+            if (Utility.IsPlayerArcher())
+            {
+                return (ArcherCurrentStats) currentStats;
+            }
+
+            if (Utility.IsPlayerWizard())
+            {
+                return (WizardCurrentStats) currentStats;
+            }
+
+            if (Utility.IsPlayerSoldier())
+            {
+                return (SoldierCurrentStats) currentStats;
+            }
+
+            return currentStats;
+        }
     }
 }
