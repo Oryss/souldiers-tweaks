@@ -8,18 +8,13 @@ namespace SouldiersTweaks
         {
             DefaultValue = 1f;
             Min = 0f;
-            Max = 1000f;
+            Max = 100f;
             Value = DefaultValue;
+            SliderValue = DefaultValue;
         }
 
-        public override void OnValueSave()
+        public override void OnValueApplied()
         {
-            if (Value == null)
-            {
-                return;
-            }
-
-            Value = (float) Value;
         }
     }
 }

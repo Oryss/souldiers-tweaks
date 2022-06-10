@@ -1,22 +1,18 @@
 ﻿namespace SouldiersTweaks
 {
-    public class GroundDodgeCooldownTweak : FloatTweak
+    public class GroundRollCooldownTweak : FloatTweak
     {
-        public GroundDodgeCooldownTweak() : base("Ground dodge cooldown")
+        public GroundRollCooldownTweak() : base("Ground roll cooldown")
         {
             DefaultValue = 1.25f;
             Min = 0f;
             Max = 3f;
             Value = DefaultValue;
+            SliderValue = DefaultValue;
         }
 
-        public override void OnValueSave()
+        public override void OnValueApplied()
         {
-            if (Value == null)
-            {
-                return;
-            }
-
             var currentStats = PlayerCurrentStats.GetPlayerCurrentStats();
             currentStats.m_BaseStats.m_fGroundRollCooldown = (float) Value;
         }

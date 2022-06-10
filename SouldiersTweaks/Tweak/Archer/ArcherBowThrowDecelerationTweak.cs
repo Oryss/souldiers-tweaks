@@ -8,15 +8,11 @@
             Min = -500f;
             Max = 500f;
             Value = DefaultValue;
+            SliderValue = DefaultValue;
         }
 
-        public override void OnValueSave()
+        public override void OnValueApplied()
         {
-            if (null == Value)
-            {
-                return;
-            }
-
             var currentStats = (ArcherCurrentStats)PlayerCurrentStats.GetPlayerCurrentStats();
             currentStats.GetArcherClassBaseStats().m_fSpinningBow_InitialDeceleration = (float) Value;
         }

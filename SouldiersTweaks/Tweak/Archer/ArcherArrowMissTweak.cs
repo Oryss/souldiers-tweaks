@@ -9,6 +9,10 @@ namespace SouldiersTweaks
             Active = false;
         }
 
+        public override void Apply()
+        {
+        }
+
         public override void OnActivate()
         {
             if (!GlobalSceneManager.m_cInstance)

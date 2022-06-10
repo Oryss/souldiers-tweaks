@@ -5,10 +5,12 @@ namespace SouldiersTweaks
 {
     public abstract class ToggleTweak : Tweak
     {
+        public bool ToggleActive { get; set; }
         public bool Active { get; set; }
 
         public ToggleTweak(string label) : base(label)
         {
+            ToggleActive = false;
             Active = false;
         }
 
@@ -18,6 +20,7 @@ namespace SouldiersTweaks
         {
             if (PlayerPrefs.HasKey(PlayerPrefKey))
             {
+                ToggleActive = Convert.ToBoolean(PlayerPrefs.GetInt(PlayerPrefKey));
                 Active = Convert.ToBoolean(PlayerPrefs.GetInt(PlayerPrefKey));
             }
         }
@@ -26,27 +29,33 @@ namespace SouldiersTweaks
         {
             PlayerPrefs.SetInt(PlayerPrefKey, Active ? 1 : 0);
         }
+        
+        public override void Apply()
+        {
+            Active = ToggleActive;
+        }
 
         public void Activate()
         {
-            Active = true;
+            ToggleActive = true;
             OnActivate();
         }
 
         public void Deactivate()
         {
-            Active = false;
+            ToggleActive = false;
             OnDeactivate();
         }
 
         public override void Render()
         {
-            Active = GUILayout.Toggle(Active, Label);
+            ToggleActive = GUILayout.Toggle(ToggleActive, Label);
 
-            if (Active)
+            if (ToggleActive)
             {
                 Activate();
-            } else
+            } 
+            else
             {
                 Deactivate();
             }
@@ -54,6 +63,7 @@ namespace SouldiersTweaks
 
         public override void Reset()
         {
+            ToggleActive = false;
             Active = false;
         }
     }

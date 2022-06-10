@@ -8,14 +8,16 @@ namespace SouldiersTweaks
         public float? DefaultValue { get; set;  }
         public float? Min { get; set; }
         public float? Max { get; set; }
+        public float? SliderValue { get; set; }
         public float? Value { get; set; }
 
         public FloatTweak(string label) : base(label)
         {
             Value = DefaultValue;
+            SliderValue = DefaultValue;
         }
 
-        public abstract void OnValueSave();
+        public abstract void OnValueApplied();
 
         public override void Render()
         {
@@ -29,8 +31,8 @@ namespace SouldiersTweaks
             GUILayout.BeginVertical();
 
                     GUILayout.BeginHorizontal();
-                        float selectedValue = GUILayout.HorizontalSlider((float) Value, (float) Min, (float) Max);
-                        Value = (float)Math.Round(selectedValue, 1);
+                        float selectedValue = GUILayout.HorizontalSlider((float)SliderValue, (float) Min, (float) Max);
+                        SliderValue = (float) Math.Round(selectedValue, 1);
                     GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal();
@@ -38,7 +40,7 @@ namespace SouldiersTweaks
                         GUILayout.Label(Min.ToString());
 
                         GUI.skin.label.alignment = TextAnchor.UpperCenter;
-                        GUILayout.Label(Value.ToString());
+                        GUILayout.Label(SliderValue.ToString() + " ( " + Value.ToString() + " )");
 
                         GUI.skin.label.alignment = TextAnchor.UpperRight;
                         GUILayout.Label(Max.ToString());
@@ -56,23 +58,26 @@ namespace SouldiersTweaks
             if (PlayerPrefs.HasKey(PlayerPrefKey))
             {
                 Value = PlayerPrefs.GetFloat(PlayerPrefKey);
+                SliderValue = PlayerPrefs.GetFloat(PlayerPrefKey);
             }
+        }
+
+        public override void Apply()
+        {
+            Value = SliderValue;
+
+            OnValueApplied();
         }
 
         public override void Save()
         {
-            if (null == Value)
-            {
-                return;
-            }
-
-            OnValueSave();
             PlayerPrefs.SetFloat(PlayerPrefKey, (float) Value);
         }
 
         public override void Reset()
         {
             Value = DefaultValue;
+            SliderValue = DefaultValue;
         }
     }
 }

@@ -13,6 +13,7 @@
         }
 
         public abstract void Render();
+        public abstract void Apply();
         public abstract void Save();
         public abstract void Load();
         public abstract void Reset();

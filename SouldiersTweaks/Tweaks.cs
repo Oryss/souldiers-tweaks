@@ -12,7 +12,7 @@ namespace SouldiersTweaks
     {
         private bool displayMenu = false;
 
-        Rect windowRect = new Rect(20, 150, 450, 550);
+        Rect windowRect = new Rect(20, 150, 450, 600);
         int windowId = 1;
 
         public static MelonLogger.Instance loggerInstance;
@@ -20,7 +20,7 @@ namespace SouldiersTweaks
         private static List<Tweak> tweaks = new List<Tweak>()
         {
             new EnemyHealthTweak(),
-            new GroundDodgeCooldownTweak(),
+            new GroundRollCooldownTweak(),
             new MoneyProbabilityTweak(),
             new MoneyAmountTweak(),
             new XpAmountTweak(),
@@ -104,6 +104,7 @@ namespace SouldiersTweaks
 
             var buttons = new Dictionary<string, string>()
             {
+                { "Apply", "Apply" },
                 { "Save", "Save" },
                 { "Load", "Load" },
                 { "Reset to defaults", "Reset" }
