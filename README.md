@@ -2,12 +2,14 @@
 
 ## Features
 
-* Enemy Health Tweak
-* Ground dodge Tweak
-* Archer Bow throw Tweak
-* Disable Archer arrow miss : your arrows will hit ennemies no matter the distance
-* Wizard Target Distance Tweak
-* Money probability and amount Tweak
+With this mod you'll be able to modify :
+
+* Enemy Health
+* Ground dodge cooldown
+* Archer Bow throw attributes
+* Disable Archer Arrow miss
+* Wizard Target Distance
+* Money probability and amount
 * XP multiplier
 * [COMING SOON?] Unlock RetroForge's Cheat menu
 
