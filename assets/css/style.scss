@@ -72,13 +72,31 @@ body {
     background: #5b2242 !important;;
 }
 
+.features-container {
+    text-align: center;
+    margin: 10 0 10px 0;
+}
+
 .features {
+    padding: 3rem 1rem;
+
+    @media (min-width:800px) {
+        padding: 3rem 10rem;
+    }
+
+    @media (min-width:1280px) {
+        padding: 3rem 10rem;
+    }
+
+    @media (min-width:1900px) {
+        padding: 3rem 20rem;
+    }
+
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 3rem 20rem;
     background-color: #241326;
     background-image: linear-gradient(120deg, #241326, #0e050c);
 
