@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43440732/173181851-3ae093d1-e0eb-49ff-90ad-f06556b39539.png">
+</p>
+
 # Orys' Souldiers Tweaks Mod
 
 ## Warning
