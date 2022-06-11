@@ -74,28 +74,27 @@ body {
 
 .features {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 5rem 6rem;
+    gap: 30px;
+    padding: 3rem 20rem;
     background: #451831;
 
     .feature{
         position: relative;
         border-radius: 10px;
-        border: 1px solid #a84c7c;
-        box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),
-          inset 0 40px 20px 0 rgba(0,0,0,0.8);
+        border: 1px solid #68294c;
+        box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), inset 0 40px 20px 0 rgb(0 0 0 / 80%);
         width: 400px;
         height: 200px;
         background-repeat: no-repeat;
         background-size: cover;
         transition: all 250ms ease-in;
         color: #f9dade;
-        font-weight: light;
         font-size: 16px;
+        font-weight: 300;
 
         &:hover .description{
           opacity: 1;
