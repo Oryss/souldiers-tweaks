@@ -1,0 +1,28 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+* {
+    font-family: Helvetica,Arial,Lucida,sans-serif;
+}
+
+.page-header {
+    box-shadow: 0 30px 125px 25px rgb(60 20 42);
+    color: #fff;
+    text-align: center;
+    background-color: #5b2242;
+    background-image: linear-gradient(120deg, #5b2242, #7f3682);
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
+    color: #f9dade!important;
+}
+
+body {
+    background: #5b2242!important;
+}
+
+.main-content p, .main-content ul, .main-content ol{
+    color: #ffccd3!important;
+}
