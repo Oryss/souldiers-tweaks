@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/43440732/173181851-3ae093d1-e0eb-49ff-90ad-f06556b39539.png">
 </p>
 
-## How to backup your save
+### How to backup your save
 
 * Open a file explorer
 * Put `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers` in the path bar and press enter
@@ -10,7 +10,7 @@
 * To restore all your saves, copy these files back into `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers`
    * You can also just restore Profile_x_save and PersistentProfile_x_save to restore Save N°x
 
-## How to install
+### How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
 * Follow the Automated Installation steps _(You only have to do this once, when new mod versions are out, just replace SouldiersTweaks.dll)_ :
@@ -22,7 +22,7 @@
 * Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.5.0/SouldiersTweaks.dll) (Version 1.5.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
-## Usage
+### Usage
 
 * Launch the game
 * Press F11
