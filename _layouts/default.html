@@ -10,6 +10,9 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     {% include head-custom.html %}
 </head>
 <body>
@@ -47,14 +50,14 @@
             </p>
         </div>
 
-        {% for feature in site.features %}
-            <div class="features">
+        <div class="features">
+            {% for feature in site.features %}
                 <div class="feature" style='background-image: url("{{ feature.image_url }}");'>
-                <div class="title">{{ feature.title }}</div>
-                <div class="description">{{ feature.description }}</div>
+                    <div class="title">{{ feature.title }}</div>
+                    <div class="description">{{ feature.description }}</div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
 
         {{ content }}
     </main>
