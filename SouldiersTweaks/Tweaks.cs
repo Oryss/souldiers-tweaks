@@ -75,7 +75,7 @@ namespace SouldiersTweaks
 
         public override void OnUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.F11))
+            if (Input.GetKeyDown(KeyCode.F11) && !Input.GetKey(KeyCode.LeftControl))
             {
                 displayMenu = !displayMenu;
 
@@ -88,6 +88,12 @@ namespace SouldiersTweaks
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
                 }
+
+            }
+
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.F11))
+            {
+                GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats);
             }
         }
 
