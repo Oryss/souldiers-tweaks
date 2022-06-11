@@ -47,7 +47,14 @@
             </p>
         </div>
 
-
+        {% for feature in site.features %}
+            <div class="features">
+                <div class="feature" style='background-image: url("{{ feature.image_url }}");'>
+                <div class="title">{{ feature.title }}</div>
+                <div class="description">{{ feature.description }}</div>
+                </div>
+            </div>
+        {% endfor %}
 
         {{ content }}
     </main>
