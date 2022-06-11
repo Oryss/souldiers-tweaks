@@ -1,4 +1,19 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43440732/173181851-3ae093d1-e0eb-49ff-90ad-f06556b39539.png">
+</p>
+
 # Orys' Souldiers Tweaks Mod
+
+## Warning
+
+The reset button does not always reset to the real original values.
+**These values might be saved with your save file, which means it could make changes that would be hard to revert.**
+
+I'll see if there is a way to be able to disable the mod's values and let the game take over.
+
+**Meanwhile you have to treat this mod (and any other) as a potential save destroyer. It could introduce bugs and side effects I'm not aware of.**
+
+**Please make a backup of your save files.**
 
 ## Features
 
@@ -23,16 +38,19 @@
 ![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
 
 * Money probability and amount Tweak
-
-![moneyTweakCompressed](https://user-images.githubusercontent.com/43440732/172942844-23cfbb4d-2547-4591-bf76-2ff0d6cd5ec1.gif)
-
 * XP multiplier
+* Air roll cooldown
+* Shield recovery speed
+* Player damage multiplier
+* Enemy damage multiplier
 
-![xpTweak](https://user-images.githubusercontent.com/43440732/172942397-4396bb11-ac1a-4668-a127-5e4a74836735.gif)
+## How to backup your save
 
-* [COMING SOON?] Unlock RetroForge's Cheat menu
-
-![image](https://user-images.githubusercontent.com/43440732/172932016-3d5b3bc2-ac3b-4e3f-8c39-ee6ea7165c40.png)
+* Open a file explorer
+* Put `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers` in the path bar and press enter
+* Copy all the files in this folder to another folder on your hard drive
+* To restore all your saves, copy these files back into `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers`
+   * You can also just restore Profile_x_save and PersistentProfile_x_save to restore Save N°x
 
 ## How to install
 
@@ -43,7 +61,7 @@
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.4.0/SouldiersTweaks.dll) (Version 1.4.0)
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.5.0/SouldiersTweaks.dll) (Version 1.5.0)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ## Usage
@@ -52,26 +70,3 @@
 * Press F11
     * This should open a window in the top-left corner
 * Use your mouse to enable/disable features and change values
-
-## Tweaks List
-
-### Enemy Health
-
-The value represents a health/armor multiplier that is applied to the real multiplier.
-A value of < 1 means it will reduce the enemy health.
-
-### Archer Arrow Miss
-
-Enable to have infinite arrow range
-
-### Ground Dodge Cooldown
-
-The value represents how long you have to wait until you can dodge again. A value of 0 means there is no cooldown.
-
-### Archer Bow Throw Deceleration / Speed / Return Acceleration
-
-Modify how the bow throw works. A Return Acceleration of 0 means the bow will not come back.
-
-### Wizard Attack Distance
-
-Changes the range of the wizard's basic attack
