@@ -40,6 +40,14 @@ I'll see if there is a way to be able to disable the mod's values and let the ga
 * Player damage multiplier
 * Enemy damage multiplier
 
+## How to backup your save
+
+* Open a file explorer
+* Put %userprofile%\appdata\locallow\RetroForgeGames\Souldiers in the path bar and press enter
+* Copy all the files in this folder to another folder on your hard drive
+* To restore all your saves, copy these files back into %userprofile%\appdata\locallow\RetroForgeGames\Souldiers
+   * You can also just restore Profile_x_save and PersistentProfile_x_save to restore Save N°x
+
 ## How to install
 
 * [Install Melon Loader](https://melonwiki.xyz/#/?id=requirements)
@@ -58,26 +66,3 @@ I'll see if there is a way to be able to disable the mod's values and let the ga
 * Press F11
     * This should open a window in the top-left corner
 * Use your mouse to enable/disable features and change values
-
-## Tweaks List
-
-### Enemy Health
-
-The value represents a health/armor multiplier that is applied to the real multiplier.
-A value of < 1 means it will reduce the enemy health.
-
-### Archer Arrow Miss
-
-Enable to have infinite arrow range
-
-### Ground Dodge Cooldown
-
-The value represents how long you have to wait until you can dodge again. A value of 0 means there is no cooldown.
-
-### Archer Bow Throw Deceleration / Speed / Return Acceleration
-
-Modify how the bow throw works. A Return Acceleration of 0 means the bow will not come back.
-
-### Wizard Attack Distance
-
-Changes the range of the wizard's basic attack
