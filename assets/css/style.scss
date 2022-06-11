@@ -11,6 +11,11 @@ a {
     color: #f3cd28;
 }
 
+.project-name {
+    color: #f5cb24;
+    text-shadow: 0 2px #c15b00;
+}
+
 .page-header {
     box-shadow: 0 30px 125px 25px rgb(60, 20, 42);
     color: #fff;
@@ -46,6 +51,8 @@ body {
     color: #f9c9a0 !important;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 15%);
+    outline: 1px solid #8b464d;
 }
 
 .main-content code {
@@ -58,4 +65,60 @@ body {
     background-color: #333;
     width: 100%;
     padding: 20px;
+}
+
+
+body {
+    background: #5b2242 !important;;
+}
+
+.feature{
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #a84c7c;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2),
+    inset 0 40px 20px 0 rgba(0,0,0,0.8);
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 250ms ease-in;
+  
+  &:hover .description{
+    opacity: 1;
+  }
+  
+  .title {
+    position: absolute;
+    top:0;
+    left:0;
+    background: none;
+    transition: all 250ms ease-in;
+    color: #fff;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    padding: 12px;
+    box-sizing: border-box;
+    color: red;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .description {
+    transition: all 250ms ease-in;
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 12px 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: red;
+  }
 }

@@ -32,9 +32,7 @@
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
         {% endif %}
 
-        <div>
-            <a href="#how-to-install" class="btn">Installation instructions</a>
-        </div>
+        <a href="#how-to-install" class="btn">Installation instructions</a>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -49,6 +47,14 @@
             </p>
         </div>
 
+        {% for feature in site.features %}
+            <div class="features">
+                <div class="feature" style='background-image: url("{{ feature.image_url }}");'>
+                <div class="title">{{ feature.title }}</div>
+                <div class="description">{{ feature.description }}</div>
+                </div>
+            </div>
+        {% endfor %}
 
         {{ content }}
     </main>
