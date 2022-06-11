@@ -43,9 +43,9 @@ I'll see if there is a way to be able to disable the mod's values and let the ga
 ## How to backup your save
 
 * Open a file explorer
-* Put %userprofile%\appdata\locallow\RetroForgeGames\Souldiers in the path bar and press enter
+* Put `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers` in the path bar and press enter
 * Copy all the files in this folder to another folder on your hard drive
-* To restore all your saves, copy these files back into %userprofile%\appdata\locallow\RetroForgeGames\Souldiers
+* To restore all your saves, copy these files back into `%userprofile%\appdata\locallow\RetroForgeGames\Souldiers`
    * You can also just restore Profile_x_save and PersistentProfile_x_save to restore Save N°x
 
 ## How to install
