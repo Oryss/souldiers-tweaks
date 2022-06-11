@@ -5,6 +5,7 @@ using System.Reflection;
 using MelonLoader;
 using SouldiersTweaks.Patch;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Orys' tweaks mod
 
@@ -35,6 +36,8 @@ namespace SouldiersTweaks
         private static List<Tweak> archerTweaks = new List<Tweak>()
         {
             new ArcherArrowMissTweak(),
+            new ArcherNormalArrowCooldownTweak(),
+            new ArcherMaxNormalArrowsTweak(),
             new ArcherBowThrowDecelerationTweak(),
             new ArcherBowThrowSpeedTweak(),
             new ArcherBowThrowReturnAccelerationTweak()
@@ -95,6 +98,35 @@ namespace SouldiersTweaks
             {
                 GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats);
             }
+
+            if (Input.GetKeyDown(KeyCode.F10))
+            {
+                SkipIntro();
+            }
+        }
+
+        public static void SkipIntro()
+        {
+            var layers = new List<EnumGUILayers>()
+            {
+                EnumGUILayers.GUILayer_Loading,
+                EnumGUILayers.GUILayer_Splash,
+                EnumGUILayers.GUILayer_Splash_AnimeVideo,
+                EnumGUILayers.GUILayer_Splash_Retroforge,
+                EnumGUILayers.GUILayer_Splash_Nave,
+            };
+
+            foreach (var layer in layers)
+            {
+                try
+                {
+                    GUIManager.mInstance.deactivate(layer);
+                } catch {
+                    Log("Error when trying to deactivate layer " + layer.ToString());
+                }
+            }
+
+            GUIManager.mInstance.activate(EnumGUILayers.GUILayer_MainMenu);
         }
 
         public override void OnGUI()
@@ -125,7 +157,7 @@ namespace SouldiersTweaks
                 if (GUILayout.Button(action.Key))
                     CallOnAllTweaks(action.Value);
 
-                GUILayout.Space(20);
+                GUILayout.Space(10);
             }
         }
 

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patch\IPatchTweak.cs" />
+    <Compile Include="Patch\IntroSkipPatch.cs" />
     <Compile Include="Tweak\All\AirDodgeCooldownTweak.cs" />
     <Compile Include="Tweak\All\PlayerDamageTweak.cs" />
     <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
@@ -77,6 +78,9 @@
     <Compile Include="Tweak\All\MoneyAmountTweak.cs" />
     <Compile Include="Patch\LootHandlerPatch.cs" />
     <Compile Include="Patch\WizardPatch.cs" />
+    <Compile Include="Tweak\Archer\ArcherNormalArrowCooldownTweak.cs" />
+    <Compile Include="Tweak\Archer\ArcherMaxNormalArrowsTweak.cs" />
+    <Compile Include="Tweak\IntTweak.cs" />
     <Compile Include="Tweak\Wizard\WizardTargetDistanceTweak.cs" />
     <Compile Include="Tweak\All\GroundRollCooldownTweak.cs" />
     <Compile Include="Tweak\Archer\ArcherBowThrowReturnAccelerationTweak.cs" />
