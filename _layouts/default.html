@@ -23,8 +23,6 @@
             <img width="250" src="https://user-images.githubusercontent.com/43440732/173182178-d91783cf-6b85-49e9-b6e6-ab938c32ed1c.png"/>
         </div>
 
-        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
         {% if site.show_downloads %}
         <a href="{{ site.github.download_url }}" class="btn">Download V{{ site.mod.version }} DLL</a>
         {% endif %}
@@ -48,8 +46,9 @@
         </div>
     </div>
 
+    <h2>Download and installation</h2>
+
     <main id="content" class="main-content" role="main">
-        <h2>Download and installation</h2>
         <div class="warning">
             <h4>Warning</h4>
             <p>

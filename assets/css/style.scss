@@ -34,7 +34,7 @@ h2 {
     font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;
     padding: 12px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid rgb(122, 52, 106);
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
@@ -42,36 +42,32 @@ h2 {
     text-shadow: 0 2px 2px #481934;
 }
 
-.main-content h2 {
-    border-bottom: 2px solid rgb(122, 52, 106);
-
-    h2 {
-        font-family: "Montserrat", sans-serif;
-        color: #fff;
-        font-size: 6vh;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            height: 0.09em;
-            min-width: 30vw;
-        }
-        
-        &::before {
-            background: linear-gradient(to right, rgba(240,240,240,0), #fff);
-            margin-right: 4vh;
-        }
-        
-        &::after {
-            background: linear-gradient(to left, rgba(240,240,240,0), #fff);
-            margin-left: 4vh;
-        } 
+.main-content h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: 6vh;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 0.09em;
+        min-width: 30vw;
+    }
+    
+    &::before {
+        background: linear-gradient(to right, rgba(240,240,240,0), #fff);
+        margin-right: 4vh;
+    }
+    
+    &::after {
+        background: linear-gradient(to left, rgba(240,240,240,0), #fff);
+        margin-left: 4vh;
     }
 }
 
@@ -119,6 +115,7 @@ body {
     margin: 10 0 10px 0;
 
     h2 {
+        border-bottom: none;
         border-top: 2px solid rgb(122, 52, 106);
     }
 }
