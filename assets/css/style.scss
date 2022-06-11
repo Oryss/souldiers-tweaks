@@ -76,17 +76,21 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     gap: 30px;
     padding: 3rem 20rem;
-    background: #451831;
+    background-color: #241326;
+    background-image: linear-gradient(120deg, #241326, #0e050c);
+
+    h3 {
+        text-align: center;
+    }
 
     .feature{
         position: relative;
         border-radius: 10px;
-        border: 1px solid #68294c;
-        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 20%), inset 0 40px 20px 0 rgba(0, 0, 0, 80%);
+        box-shadow: 0 4px 6px 0 #00000033,
+        inset 0 40px 20px 0 #000000cc;
         width: 400px;
         height: 200px;
         background-repeat: no-repeat;
@@ -101,6 +105,7 @@ body {
         }
         
         .title {
+          font-family: Montserrat, sans-serif;
           position: absolute;
           top:0;
           left:0;
@@ -119,6 +124,7 @@ body {
         }
         
         .description {
+          font-family: Montserrat, sans-serif;
           transition: all 250ms ease-in;
           opacity: 0;
           position: absolute;
