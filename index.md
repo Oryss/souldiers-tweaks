@@ -34,16 +34,11 @@ I'll see if there is a way to be able to disable the mod's values and let the ga
 ![wizardTargetTweak](https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif)
 
 * Money probability and amount Tweak
-
-![moneyTweakCompressed](https://user-images.githubusercontent.com/43440732/172942844-23cfbb4d-2547-4591-bf76-2ff0d6cd5ec1.gif)
-
 * XP multiplier
-
-![xpTweak](https://user-images.githubusercontent.com/43440732/172942397-4396bb11-ac1a-4668-a127-5e4a74836735.gif)
-
-* [COMING SOON?] Unlock RetroForge's Cheat menu
-
-![image](https://user-images.githubusercontent.com/43440732/172932016-3d5b3bc2-ac3b-4e3f-8c39-ee6ea7165c40.png)
+* Air roll cooldown
+* Shield recovery speed
+* Player damage multiplier
+* Enemy damage multiplier
 
 ## How to install
 
