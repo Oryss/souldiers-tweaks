@@ -7,6 +7,10 @@
     font-family: Helvetica,Arial,Lucida,sans-serif;
 }
 
+a {
+    color: #f3cd28;
+}
+
 .page-header {
     box-shadow: 0 30px 125px 25px rgb(60, 20, 42);
     color: #fff;
@@ -15,14 +19,40 @@
     background-image: linear-gradient(120deg, #5b2242, #7f3682);
 }
 
+.project-tagline {
+    color: #ffedf0 !important;
+}
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
-    color: #f9dade!important;
+    color: #f9dade !important;
+    text-shadow: 0 2px 2px #481934;
 }
 
 body {
+    color: #ffccd3 !important;
     background: #5b2242!important;
 }
 
 .main-content p, .main-content ul, .main-content ol{
     color: #ffccd3!important;
+}
+
+.warning {
+    h3 {
+        color: #f5bd8d !important;
+    }
+
+    background: #f79e302e;
+    color: #f9c9a0 !important;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-content code {
+    color: #ffccbc;
+    background-color: #813861;
+}
+
+.site-footer {
+    border-top: solid 2px #8b3f69;
 }
