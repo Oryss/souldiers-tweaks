@@ -2,19 +2,6 @@
   <img src="https://user-images.githubusercontent.com/43440732/173181851-3ae093d1-e0eb-49ff-90ad-f06556b39539.png">
 </p>
 
-# Orys' Souldiers Tweaks Mod
-
-## Warning
-
-The reset button does not always reset to the real original values.
-**These values might be saved with your save file, which means it could make changes that would be hard to revert.**
-
-I'll see if there is a way to be able to disable the mod's values and let the game take over.
-
-**Meanwhile you have to treat this mod (and any other) as a potential save destroyer. It could introduce bugs and side effects I'm not aware of.**
-
-**Please make a backup of your save files.**
-
 ## Features
 
 * Enemy Health Tweak : decrease or increase the health and armor of all enemies in the game
