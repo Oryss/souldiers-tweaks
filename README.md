@@ -11,7 +11,13 @@ With this mod you'll be able to modify :
 * Wizard Target Distance
 * Money probability and amount
 * XP multiplier
-* [COMING SOON?] Unlock RetroForge's Cheat menu
+* Archer normal arrows cooldown
+* Archer max normal arrows
+
+Other features :
+
+* Skip intro automatically by default (will make this configurable)
+* Unlock RetroForge's Cheat menu
 
 ## How to install
 
