@@ -7,3 +7,8 @@ github:
 mod:
   version: 1.5.0
 markdown: GFM
+collections:
+  features:
+    - image_url
+    - title
+    - description
