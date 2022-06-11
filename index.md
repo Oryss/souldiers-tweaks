@@ -2,9 +2,7 @@
 
 ## Warning
 
-The reset button does not always reset to the real original values. For example the enemy health modifier doesn't take the original difficulty level's value.
-If you're playing on Easy the original value could be 0.5, but the mod will put it at 1.
-
+The reset button does not always reset to the real original values.
 **These values might be saved with your save file, which means it could make changes that would be hard to revert.**
 
 I'll see if there is a way to be able to disable the mod's values and let the game take over.
