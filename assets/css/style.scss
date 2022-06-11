@@ -77,6 +77,10 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5rem 6rem;
+    background: #451831;
 
     .feature{
         position: relative;

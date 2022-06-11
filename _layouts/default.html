@@ -38,6 +38,15 @@
         <a href="#how-to-install" class="btn">Installation instructions</a>
     </header>
 
+    <div class="features">
+        {% for feature in site.features %}
+            <div class="feature" style='background-image: url("{{ feature.image_url }}");'>
+                <div class="title">{{ feature.title }}</div>
+                <div class="description">{{ feature.description }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
     <main id="content" class="main-content" role="main">
         <div class="warning">
             <h3>Warning</h3>
@@ -48,15 +57,6 @@
                 This mod could potentialy ruin your save file. It could introduce bugs and side effects I'm not aware of.<br/>
                 Please make a backup of your save files.
             </p>
-        </div>
-
-        <div class="features">
-            {% for feature in site.features %}
-                <div class="feature" style='background-image: url("{{ feature.image_url }}");'>
-                    <div class="title">{{ feature.title }}</div>
-                    <div class="description">{{ feature.description }}</div>
-                </div>
-            {% endfor %}
         </div>
 
         {{ content }}
