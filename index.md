@@ -9,9 +9,8 @@ If you're playing on Easy the original value could be 0.5, but the mod will put 
 
 I'll see if there is a way to be able to disable the mod's values and let the game take over.
 
-**Meanwhile you have to treat this mod (and any other) as a potential save destroyer. It could introduce bugs and side effects I'm not aware of.
-Please make a backup of your save files.
-**
+**Meanwhile you have to treat this mod (and any other) as a potential save destroyer. It could introduce bugs and side effects I'm not aware of.**
+**Please make a backup of your save files.**
 
 ## Features
 
