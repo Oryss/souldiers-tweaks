@@ -19,7 +19,7 @@
     * Click the SELECT button
     * Select and Open Souldiers EXE in your Game's Installation Folder _(You can find it by Right-clicking Souldiers in your library > Properties > Local Files > Browse...)_
     * Click the INSTALL button
-* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.5.0/SouldiersTweaks.dll) (Version 1.5.0)
+* Download [SouldiersTweaks.dll](https://github.com/Oryss/souldiers-tweaks/releases/download/1.5.1/SouldiersTweaks.dll) (Version 1.5.1)
 * Put `SouldiersTweaks.dll` in the `Mods` folder, inside the Souldiers Installation Folder
 
 ### Usage
