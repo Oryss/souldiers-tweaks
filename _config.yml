@@ -9,6 +9,6 @@ mod:
 markdown: GFM
 collections:
   features:
-    - image_url: true
-    - title: true
-    - description: true
+    image_url: true
+    title: true
+    description: true
