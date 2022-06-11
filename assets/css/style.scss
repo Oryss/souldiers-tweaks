@@ -28,9 +28,51 @@ a {
     color: #ffedf0 !important;
 }
 
+h2 {
+    font-size: 22px;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    padding: 12px;
+    border-bottom: 2px solid transparent;
+}
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6{
     color: #f9dade !important;
     text-shadow: 0 2px 2px #481934;
+}
+
+.main-content h2 {
+    border-bottom: 2px solid rgb(122, 52, 106);
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        color: #fff;
+        font-size: 6vh;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            height: 0.09em;
+            min-width: 30vw;
+        }
+        
+        &::before {
+            background: linear-gradient(to right, rgba(240,240,240,0), #fff);
+            margin-right: 4vh;
+        }
+        
+        &::after {
+            background: linear-gradient(to left, rgba(240,240,240,0), #fff);
+            margin-left: 4vh;
+        } 
+    }
 }
 
 body {
@@ -43,7 +85,7 @@ body {
 }
 
 .warning {
-    h3 {
+    h4 {
         color: #f5bd8d !important;
     }
 
@@ -75,6 +117,10 @@ body {
 .features-container {
     text-align: center;
     margin: 10 0 10px 0;
+
+    h2 {
+        border-top: 2px solid rgb(122, 52, 106);
+    }
 }
 
 .features {
@@ -100,10 +146,6 @@ body {
     background-color: #241326;
     background-image: linear-gradient(120deg, #241326, #0e050c);
 
-    h3 {
-        text-align: center;
-    }
-
     .feature{
         position: relative;
         border-radius: 10px;
@@ -123,7 +165,7 @@ body {
         }
         
         .title {
-          font-family: Montserrat, sans-serif;
+          font-family: "Montserrat", sans-serif;
           position: absolute;
           top:0;
           left:0;
@@ -142,7 +184,7 @@ body {
         }
         
         .description {
-          font-family: Montserrat, sans-serif;
+          font-family: "Montserrat", sans-serif;
           transition: all 250ms ease-in;
           opacity: 0;
           position: absolute;
