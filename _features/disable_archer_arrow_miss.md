@@ -1,5 +1,5 @@
 ---
-image_url: https://user-images.githubusercontent.com/43440732/173057765-f39f6b57-5ace-4f36-9702-71c51c2ba36c.gif
+image_url: https://user-images.githubusercontent.com/43440732/173233634-2907da04-f4cb-451b-9734-387b0fd3eec1.gif
 title: Disable Arrow Miss
 description: Enable this tweak to never miss a shot
 ---
