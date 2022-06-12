@@ -1,5 +1,5 @@
 ---
-image_url: https://user-images.githubusercontent.com/43440732/172604387-10c19a61-3cd6-4c48-830a-e20c93214c7b.gif
+image_url: https://user-images.githubusercontent.com/43440732/173233590-bd6b8a14-ec41-49cc-a1b2-c42d8dc82fe8.gif
 title: Wizard Target Distance
 description: Change how far you can attack targets
 ---
