@@ -22,7 +22,7 @@ namespace SouldiersTweaks
         public override void Render()
         {
             GUI.skin.label.alignment = TextAnchor.UpperLeft;
-            GUILayout.BeginHorizontal();
+            GUILayout.BeginHorizontal(new GUIStyle() { padding = new RectOffset() { right = 10, left = 10 } });
 
             GUILayout.Label(Label.ToString(), GUILayout.Width(200));
 
@@ -36,7 +36,7 @@ namespace SouldiersTweaks
                     GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal();
-                GUI.skin.label.alignment = TextAnchor.UpperLeft;
+                        GUI.skin.label.alignment = TextAnchor.UpperLeft;
                         GUILayout.Label(Min.ToString());
 
                         GUI.skin.label.alignment = TextAnchor.UpperCenter;

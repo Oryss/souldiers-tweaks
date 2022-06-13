@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Patch\IPatchTweak.cs" />
     <Compile Include="Patch\IntroSkipPatch.cs" />
+    <Compile Include="Tweak\All\GravityTweak.cs" />
     <Compile Include="Tweak\All\AirDodgeCooldownTweak.cs" />
     <Compile Include="Tweak\All\PlayerDamageTweak.cs" />
     <Compile Include="Tweak\All\EnemyHealthTweak.cs" />

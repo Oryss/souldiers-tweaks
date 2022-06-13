@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace SouldiersTweaks
 {
@@ -13,6 +14,23 @@ namespace SouldiersTweaks
                 if (difficultyLevels[i].m_level == DifficultyManager.s_cInstance.m_currentDifficulty)
                 {
                     return difficultyLevels[i];
+                }
+            }
+
+            return null;
+        }
+
+        public static PlayMakerFSM GetPlayerFsm()
+        {
+            var player = GameObject.FindGameObjectsWithTag("Player");
+
+            if (player.Length > 0)
+            {
+                PlayMakerFSM fsm = player[0].GetComponent(typeof(PlayMakerFSM)) as PlayMakerFSM;
+
+                if (fsm != null)
+                {
+                    return fsm;
                 }
             }
 

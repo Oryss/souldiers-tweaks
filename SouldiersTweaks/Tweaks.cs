@@ -15,11 +15,12 @@ namespace SouldiersTweaks
     {
         private bool displayMenu = false;
 
-        Rect windowRect = new Rect(20, 150, 500, 900);
+        Rect windowRect = new Rect(20, 150, 850, 600);
         int windowId = 1;
+        GUIStyle paddingStyle = new GUIStyle() { padding = new RectOffset() { right = 10, left = 10 } };
 
         public static MelonLogger.Instance loggerInstance;
-        
+
         private static List<Tweak> tweaks = new List<Tweak>()
         {
             new EnemyHealthTweak(),
@@ -31,6 +32,7 @@ namespace SouldiersTweaks
             new MoneyAmountTweak(),
             new XpAmountTweak(),
             new ShieldRecoveryTweak(),
+            new GravityTweak(),
         };
 
         private static List<Tweak> archerTweaks = new List<Tweak>()
@@ -98,11 +100,6 @@ namespace SouldiersTweaks
             {
                 GUIManager.mInstance.activate(EnumGUILayers.GUILayer_IngameCheats);
             }
-
-            if (Input.GetKeyDown(KeyCode.F10))
-            {
-                SkipIntro();
-            }
         }
 
         public static void SkipIntro()
@@ -142,22 +139,67 @@ namespace SouldiersTweaks
 
         void TweaksWindow(int windowId)
         {
-            CallOnAllTweaks("Render");
+            RenderTweaks();
 
-            var buttons = new Dictionary<string, string>()
+            GUILayout.BeginHorizontal();
+                if (GUILayout.Button("Apply"))
+                    CallOnAllTweaks("Apply");
+                GUILayout.FlexibleSpace();
+
+            if (GUILayout.Button("Save"))
+                CallOnAllTweaks("Save");
+            GUILayout.Space(20);
+            if (GUILayout.Button("Load"))
+                CallOnAllTweaks("Load");
+
+            GUILayout.FlexibleSpace();
+
+            if (GUILayout.Button("Reset to defaults"))
+                CallOnAllTweaks("Reset");
+
+            GUILayout.EndHorizontal();
+        }
+
+        private void RenderTweaks()
+        {
+            GUILayout.BeginHorizontal();
+                GUILayout.BeginVertical();
+                    GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+                    GUILayout.Label("General");
+                    GUI.skin.label.alignment = TextAnchor.MiddleLeft;
+                    foreach (var tweak in tweaks)
+                    {
+                        tweak.Render();
+                    }
+                    GUILayout.FlexibleSpace();
+                GUILayout.EndVertical();
+
+                GUILayout.BeginVertical();
+                    GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+                    GUILayout.Label("Class-specific");
+                    GUI.skin.label.alignment = TextAnchor.MiddleLeft;
+                    RenderClassSpecificTweaks();
+                    GUILayout.FlexibleSpace();
+                GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+        }
+
+        private void RenderClassSpecificTweaks()
+        {
+            if (Utility.IsPlayerArcher())
             {
-                { "Apply", "Apply" },
-                { "Save", "Save" },
-                { "Load", "Load" },
-                { "Reset to defaults", "Reset" }
-            };
+                foreach (var archerTweak in archerTweaks)
+                {
+                    archerTweak.Render();
+                }
+            }
 
-            foreach (var action in buttons)
+            if (Utility.IsPlayerWizard())
             {
-                if (GUILayout.Button(action.Key))
-                    CallOnAllTweaks(action.Value);
-
-                GUILayout.Space(10);
+                foreach (var wizardTweak in wizardTweaks)
+                {
+                    wizardTweak.Render();
+                }
             }
         }
 

@@ -49,16 +49,18 @@ namespace SouldiersTweaks
 
         public override void Render()
         {
-            ToggleActive = GUILayout.Toggle(ToggleActive, Label);
+            GUILayout.BeginHorizontal(new GUIStyle() { padding = new RectOffset() { right = 10, left = 10 } });
+                ToggleActive = GUILayout.Toggle(ToggleActive, Label);
 
-            if (ToggleActive)
-            {
-                Activate();
-            } 
-            else
-            {
-                Deactivate();
-            }
+                if (ToggleActive)
+                {
+                    Activate();
+                } 
+                else
+                {
+                    Deactivate();
+                }
+            GUILayout.EndHorizontal();
         }
 
         public override void Reset()
