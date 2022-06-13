@@ -146,16 +146,16 @@ namespace SouldiersTweaks
                     CallOnAllTweaks("Apply");
                 GUILayout.FlexibleSpace();
 
+            if (GUILayout.Button("Reset to defaults"))
+                CallOnAllTweaks("Reset");
+
+            GUILayout.FlexibleSpace();
+
             if (GUILayout.Button("Save"))
                 CallOnAllTweaks("Save");
             GUILayout.Space(20);
             if (GUILayout.Button("Load"))
                 CallOnAllTweaks("Load");
-
-            GUILayout.FlexibleSpace();
-
-            if (GUILayout.Button("Reset to defaults"))
-                CallOnAllTweaks("Reset");
 
             GUILayout.EndHorizontal();
         }
