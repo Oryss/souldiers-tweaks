@@ -11,14 +11,14 @@ namespace SouldiersTweaks.Patch
         {
 			var tweak = (CriticalHitBulletTimeTweak) Tweaks.GetPatchTweak(typeof(CriticalHitBulletTimeTweak));
 			if (tweak.Active) {
-				__instance.m_eBulletTimeOnHit = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnHitResistance = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnHitWeakElement = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnHitStrongElement = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnHit = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnHitResistance = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnHitWeakElement = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnHitStrongElement = CombatHelper.BulletTimeLevel.NONE;
 				__instance.m_eBulletTimeOnCriticalHit = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnBlock = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnBlockBreak = CombatHelper.BulletTimeLevel.NONE;
-				__instance.m_eBulletTimeOnPerfectBlock = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnBlock = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnBlockBreak = CombatHelper.BulletTimeLevel.NONE;
+				//__instance.m_eBulletTimeOnPerfectBlock = CombatHelper.BulletTimeLevel.NONE;
 			}
 		}
     }
