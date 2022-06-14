@@ -10,11 +10,13 @@ namespace SouldiersTweaks
         public float? Max { get; set; }
         public float? SliderValue { get; set; }
         public float? Value { get; set; }
+        public int Decimals { get; set; }
 
-        public FloatTweak(string label) : base(label)
+        public FloatTweak(string label, int decimals = 1) : base(label)
         {
             Value = DefaultValue;
             SliderValue = DefaultValue;
+            Decimals = decimals;
         }
 
         public abstract void OnValueApplied();
@@ -32,7 +34,7 @@ namespace SouldiersTweaks
 
                     GUILayout.BeginHorizontal();
                         float selectedValue = GUILayout.HorizontalSlider((float)SliderValue, (float) Min, (float) Max);
-                        SliderValue = (float) Math.Round(selectedValue, 1);
+                        SliderValue = (float) Math.Round(selectedValue, Decimals);
                     GUILayout.EndHorizontal();
 
                 GUILayout.BeginHorizontal();

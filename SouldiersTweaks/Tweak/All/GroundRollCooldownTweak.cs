@@ -2,7 +2,7 @@
 {
     public class GroundRollCooldownTweak : FloatTweak
     {
-        public GroundRollCooldownTweak() : base("Ground roll cooldown")
+        public GroundRollCooldownTweak() : base("Ground roll cooldown", 2)
         {
             DefaultValue = 1.25f;
             Min = 0f;

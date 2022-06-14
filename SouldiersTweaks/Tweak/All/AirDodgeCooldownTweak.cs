@@ -2,7 +2,7 @@
 {
     public class AirRollCooldownTweak : FloatTweak
     {
-        public AirRollCooldownTweak() : base("Air roll cooldown")
+        public AirRollCooldownTweak() : base("Air roll cooldown", 2)
         {
             DefaultValue = 1.8f;
             Min = 0f;

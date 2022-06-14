@@ -68,8 +68,12 @@
   <ItemGroup>
     <Compile Include="Patch\IPatchTweak.cs" />
     <Compile Include="Patch\IntroSkipPatch.cs" />
+    <Compile Include="Patch\CriticalHitBulletTimePatch.cs" />
+    <Compile Include="Tweak\All\CriticalPercentMultiplierTweak.cs" />
     <Compile Include="Tweak\All\GravityTweak.cs" />
     <Compile Include="Tweak\All\AirDodgeCooldownTweak.cs" />
+    <Compile Include="Tweak\All\CriticalProbabilityTweak.cs" />
+    <Compile Include="Tweak\All\CriticalHitBulletTimeTweak.cs" />
     <Compile Include="Tweak\All\PlayerDamageTweak.cs" />
     <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
     <Compile Include="Tweak\All\ShieldRecoveryTweak.cs" />

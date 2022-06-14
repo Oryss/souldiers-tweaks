@@ -15,7 +15,7 @@ namespace SouldiersTweaks
     {
         private bool displayMenu = false;
 
-        Rect windowRect = new Rect(20, 150, 850, 600);
+        Rect windowRect = new Rect(20, 150, 850, 750);
         int windowId = 1;
         GUIStyle paddingStyle = new GUIStyle() { padding = new RectOffset() { right = 10, left = 10 } };
 
@@ -33,6 +33,9 @@ namespace SouldiersTweaks
             new XpAmountTweak(),
             new ShieldRecoveryTweak(),
             new GravityTweak(),
+            new CriticalProbabilityTweak(),
+            new CriticalPercentMultiplierTweak(),
+            new CriticalHitBulletTimeTweak(),
         };
 
         private static List<Tweak> archerTweaks = new List<Tweak>()
