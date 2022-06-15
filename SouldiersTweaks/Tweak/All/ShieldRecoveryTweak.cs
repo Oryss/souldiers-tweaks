@@ -34,8 +34,6 @@ namespace SouldiersTweaks
         {
             GetBaseSpeedFieldInfo().SetValue(Utility.GetPlayerCurrentStats(), (float) Value);
 
-            Tweaks.Log(((float)GetBaseSpeedFieldInfo().GetValue(Utility.GetPlayerCurrentStats())).ToString());
-
             GetNeedRecalculateHealthShieldSpeedFieldInfo().SetValue(Utility.GetPlayerCurrentStats(), true);
         }
     }
