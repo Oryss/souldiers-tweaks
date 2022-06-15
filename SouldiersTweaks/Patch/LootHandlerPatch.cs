@@ -35,4 +35,14 @@ namespace SouldiersTweaks.Patch
             }
         }
     }
+
+    [HarmonyPatch(typeof(LootHandler), "GiveLife")]
+    class LootHandlerLifePatch
+    {
+        public static void Prefix(ref LootHandler.LootElement _lifeItem)
+        {
+            var healthOrbsAmountMultiplierTweak = (HealthOrbsAmountMultiplierTweak)Tweaks.GetPatchTweak(typeof(HealthOrbsAmountMultiplierTweak));
+            _lifeItem.m_fAmount *= (float) healthOrbsAmountMultiplierTweak.Value;
+        }
+    }
 }

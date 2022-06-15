@@ -36,6 +36,7 @@ namespace SouldiersTweaks
             new CriticalProbabilityTweak(),
             new CriticalPercentMultiplierTweak(),
             new CriticalHitBulletTimeTweak(),
+            new HealthOrbsAmountMultiplierTweak(),
         };
 
         private static List<Tweak> archerTweaks = new List<Tweak>()
