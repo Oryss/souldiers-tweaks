@@ -3,9 +3,9 @@ title: Orys' Souldiers Tweaks Mod
 description: Souldiers Mod that tweaks some parts of the game
 show_downloads: true
 github:
-  download_url: https://github.com/Oryss/souldiers-tweaks/releases/download/1.10.0/SouldiersTweaks.dll
+  download_url: https://github.com/Oryss/souldiers-tweaks/releases/download/1.10.1/SouldiersTweaks.dll
 mod:
-  version: 1.10.0
+  version: 1.10.1
 markdown: GFM
 collections:
   features:
