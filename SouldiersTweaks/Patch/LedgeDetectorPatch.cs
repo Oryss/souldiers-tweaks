@@ -9,7 +9,7 @@ namespace SouldiersTweaks.Patch
 	{
         public static bool Prefix()
         {
-            var tweak = (CriticalHitBulletTimeTweak)Tweaks.GetPatchTweak(typeof(CriticalHitBulletTimeTweak));
+            var tweak = (LedgeGrabTweak)Tweaks.GetPatchTweak(typeof(LedgeGrabTweak));
             if (tweak.Active)
             {
                 if (!InputManager.s_cInstance.GetInputStatus(InputManager.InputCommand.UP).Pressed && !InputManager.s_cInstance.GetInputStatus(InputManager.InputCommand.UP).Held)
