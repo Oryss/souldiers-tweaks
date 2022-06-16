@@ -66,6 +66,7 @@
     <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patch\LedgeDetectorPatch.cs" />
     <Compile Include="Patch\PickableItemFactoryPatch.cs" />
     <Compile Include="Patch\IPatchTweak.cs" />
     <Compile Include="Patch\IntroSkipPatch.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Tweak\All\EnemyHealthTweak.cs" />
     <Compile Include="Tweak\All\ShieldRecoveryTweak.cs" />
     <Compile Include="Tweak\All\UpgradeItemsAmountTweak.cs" />
+    <Compile Include="Tweak\All\LedgeGrabTweak.cs" />
     <Compile Include="Tweak\All\XpAmountTweak.cs" />
     <Compile Include="Tweak\Archer\ArcherArrowMissTweak.cs" />
     <Compile Include="Tweak\All\MoneyProbabilityTweak.cs" />
