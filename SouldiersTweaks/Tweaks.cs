@@ -15,9 +15,14 @@ namespace SouldiersTweaks
     {
         private bool displayMenu = false;
 
-        Rect windowRect = new Rect(20, 150, 850, 750);
+        private Texture2D windowBackground;
+        private GUIStyle windowStyle;
+        private GUIStyle categoryTitleStyle;
+        private GUIStyle titleStyle;
+        Rect windowRect = new Rect(20, 20, 850, 750);
         int windowId = 1;
         GUIStyle paddingStyle = new GUIStyle() { padding = new RectOffset() { right = 10, left = 10 } };
+        GUIStyle paddingTopStyle = new GUIStyle() { padding = new RectOffset() { top = 20 } };
 
         public static MelonLogger.Instance loggerInstance;
 
@@ -38,6 +43,7 @@ namespace SouldiersTweaks
             new CriticalHitBulletTimeTweak(),
             new HealthOrbsAmountMultiplierTweak(),
             new UpgradeItemsAmountTweak(),
+            new LedgeGrabTweak(),
         };
 
         private static List<Tweak> archerTweaks = new List<Tweak>()
@@ -65,6 +71,35 @@ namespace SouldiersTweaks
             base.OnApplicationLateStart();
 
             loggerInstance = LoggerInstance;
+            
+            windowBackground = new Texture2D(1, 1, TextureFormat.RGBAFloat, false);
+            windowBackground.SetPixel(0, 0, new Color32(91, 34, 66, 230));
+            windowBackground.Apply();
+
+            windowStyle = new GUIStyle(GUIStyle.none);
+            windowStyle.fontSize = 20;
+            windowStyle.normal.textColor = Color.yellow;
+            windowStyle.hover.textColor = Color.yellow;
+            windowStyle.focused.textColor = Color.yellow;
+            windowStyle.padding.top = 20;
+            windowStyle.padding.right = 30;
+            windowStyle.padding.bottom = 20;
+            windowStyle.padding.left = 30;
+            windowStyle.normal.background = windowBackground;
+            windowStyle.focused.background = windowBackground;
+            windowStyle.hover.background = windowBackground;
+
+            categoryTitleStyle = new GUIStyle(GUIStyle.none);
+            categoryTitleStyle.fontSize = 18;
+            categoryTitleStyle.normal.textColor = Color.yellow;
+            categoryTitleStyle.alignment = TextAnchor.MiddleCenter;
+
+            titleStyle = new GUIStyle(GUIStyle.none);
+            titleStyle.fontSize = 20;
+            titleStyle.normal.textColor = Color.green;
+            titleStyle.hover.textColor = Color.green;
+            titleStyle.focused.textColor = Color.green;
+            titleStyle.alignment = TextAnchor.MiddleLeft;
         }
 
         public static List<Tweak> PatchTweaks()
@@ -135,15 +170,19 @@ namespace SouldiersTweaks
         {
             if (!displayMenu) return;
 
-            GUI.color = Color.white;
-            GUI.backgroundColor = Color.black;
-            GUI.contentColor = Color.white;
-
-            windowRect = GUI.Window(windowId, windowRect, TweaksWindow, "Orys' Tweaks");
+            windowRect = GUILayout.Window(windowId, windowRect, TweaksWindow, "Orys' Tweaks", windowStyle);
         }
 
         void TweaksWindow(int windowId)
         {
+            GUI.color = new Color32(255, 204, 211, 255);
+
+            if (null == Utility.GetPlayerCurrentStats())
+            {
+                GUILayout.Label("Waiting for game to start");
+                return;
+            }
+
             RenderTweaks();
 
             GUILayout.BeginHorizontal();
@@ -167,10 +206,12 @@ namespace SouldiersTweaks
 
         private void RenderTweaks()
         {
-            GUILayout.BeginHorizontal();
+            GUILayout.BeginHorizontal(paddingTopStyle);
                 GUILayout.BeginVertical();
                     GUI.skin.label.alignment = TextAnchor.MiddleCenter;
-                    GUILayout.Label("General");
+                    GUILayout.Space(20);
+                    GUILayout.Label("General", categoryTitleStyle);
+                    GUILayout.Space(20);
                     GUI.skin.label.alignment = TextAnchor.MiddleLeft;
                     foreach (var tweak in tweaks)
                     {
@@ -179,9 +220,10 @@ namespace SouldiersTweaks
                     GUILayout.FlexibleSpace();
                 GUILayout.EndVertical();
 
-                GUILayout.BeginVertical();
-                    GUI.skin.label.alignment = TextAnchor.MiddleCenter;
-                    GUILayout.Label("Class-specific");
+                    GUILayout.BeginVertical();
+                    GUILayout.Space(20);
+                    GUILayout.Label("Class-specific", categoryTitleStyle);
+                    GUILayout.Space(20);
                     GUI.skin.label.alignment = TextAnchor.MiddleLeft;
                     RenderClassSpecificTweaks();
                     GUILayout.FlexibleSpace();
